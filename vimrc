@@ -11,6 +11,7 @@ Plugin 'file:///home/gmarik/path/to/plugin'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -24,10 +25,18 @@ set t_Co=256
 set hidden
 set backspace=2
 
+"color
+colorscheme vs
+
 "powerline
-set rtp+=$HOME/.local/lib/python3.5/site-packages/powerline/bindings/vim/   
-set laststatus=2                                                            
-set t_Co=256
+" Powerline
+set rtp+=/usr/share/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+let g:powerline_pycmd = "py3"
 
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
@@ -38,5 +47,17 @@ inoremap {<cr> {<cr>}<c-o><s-o>
 inoremap [<cr> [<cr>]<c-o><s-o>
 inoremap (<cr> (<cr>)<c-o><s-o>
 
-
 autocmd BufNewFile,BufRead *.cpp set formatprg=astyle\ -T4pb
+
+execute pathogen#infect()
+
+function! CleverTab()
+  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+    return "\<Tab>"
+  else
+    return "\<C-N>"
+endfunction
+inoremap <Tab> <C-R>=CleverTab()<CR>
+
+"pastetoggle
+set pastetoggle=<F2>
