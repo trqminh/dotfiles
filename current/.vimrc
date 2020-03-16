@@ -20,6 +20,7 @@ Plugin 'kien/ctrlp.vim'
 "theme stuffs
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'itchyny/lightline.vim'
+Plugin 'NLKNguyen/papercolor-theme'
 
 " git
 Plugin 'tpope/vim-fugitive'
@@ -39,16 +40,23 @@ filetype plugin indent on    " required
 "nerdtree conf
 "autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
-let NERDTreeMapOpenInTab='<ENTER>'
+"let NERDTreeMapOpenInTab='<ENTER>'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 
 "color scheme
 "colo desert
-colo dracula
+"colo dracula
+"colo atom-dark-256
+colo PaperColor
+set background=dark
+
+"transparent
+hi Normal guibg=NONE ctermbg=NONE
+"hi NonText ctermbg=none
 
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'PaperColor',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
@@ -67,6 +75,7 @@ let g:lightline = {
       \   'gitdiff': 'middle',
       \ },
       \ }
+
 
 set noshowmode
 "set
@@ -93,7 +102,6 @@ set encoding=utf8
 set termencoding=utf-8
 set fileencodings=          " Don't do any encoding conversion
 
-"kite
 
 "search
 set hlsearch   " highlight search terms
@@ -105,6 +113,10 @@ set ignorecase " ignore case when searching
 "nice to have
 set list
 
+"pastetoggle
+set pastetoggle=<F2>
+
+
 " Define characters to show when you show formatting
 " stolen from https://github.com/tpope/vim-sensible
 if &listchars ==# 'eol:$'
@@ -113,10 +125,6 @@ if &listchars ==# 'eol:$'
     let &listchars = "tab:\u21e5,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
   endif
 endif
-
-
-"Color scheme
-"colorscheme atom-dark-256
 
 
 "For proper tabbing and bracket insertion"
@@ -128,10 +136,11 @@ inoremap (<cr> (<cr>)<c-o><s-o>
 "select all, copy clipboard
 map <C-a> <esc>ggVG<CR>
 
-noremap <Leader>y "*y
-noremap <Leader>p "*p
-noremap <Leader>Y "+y
-noremap <Leader>P "+p
+"noremap <Leader>y "+y
+"noremap <Leader>p "+p
+"noremap <Leader>yy "+y
+"noremap <Leader>pp "+p
+
 
 "tab
 nnoremap <C-Left> :tabprevious<CR>
@@ -148,15 +157,5 @@ endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
 
-"pastetoggle
-set pastetoggle=<F2>
-
-
 "powerline
-set rtp+=$HOME/myenv/lib/python3.6/site-packages/powerline/bindings/vim/
-
-" Always show statusline
-set laststatus=2
-
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
-set t_Co=256
+"set rtp+=$HOME/myenv/lib/python3.6/site-packages/powerline/bindings/vim/
