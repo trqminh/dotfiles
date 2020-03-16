@@ -25,6 +25,7 @@ Plugin 'NLKNguyen/papercolor-theme'
 " git
 Plugin 'tpope/vim-fugitive'
 Plugin 'niklaas/lightline-gitdiff'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " added nerdtree
 Plugin 'scrooloose/nerdtree'
@@ -42,7 +43,6 @@ filetype plugin indent on    " required
 autocmd VimEnter * wincmd p
 "let NERDTreeMapOpenInTab='<ENTER>'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
-
 
 "color scheme
 "colo desert
@@ -147,6 +147,7 @@ nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <C-j> :tabprevious<CR>
 nnoremap <C-k> :tabnext<CR>
+nnoremap <C-t> :tabnew<CR>
 
 function! CleverTab()
   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
@@ -159,3 +160,4 @@ inoremap <Tab> <C-R>=CleverTab()<CR>
 
 "powerline
 "set rtp+=$HOME/myenv/lib/python3.6/site-packages/powerline/bindings/vim/
+
