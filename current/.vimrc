@@ -46,17 +46,15 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
 "colo desert
-"colo dracula
+colo dracula
 "colo atom-dark-256
-colo PaperColor
-set background=dark
 
 "transparent
 hi Normal guibg=NONE ctermbg=NONE
 "hi NonText ctermbg=none
 
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
@@ -116,6 +114,9 @@ set list
 "pastetoggle
 set pastetoggle=<F2>
 
+"set mouse
+set mouse=n
+
 
 " Define characters to show when you show formatting
 " stolen from https://github.com/tpope/vim-sensible
@@ -149,6 +150,7 @@ nnoremap <C-j> :tabprevious<CR>
 nnoremap <C-k> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
 
+
 function! CleverTab()
   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
     return "\<Tab>"
@@ -160,4 +162,3 @@ inoremap <Tab> <C-R>=CleverTab()<CR>
 
 "powerline
 "set rtp+=$HOME/myenv/lib/python3.6/site-packages/powerline/bindings/vim/
-
