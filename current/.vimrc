@@ -12,7 +12,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+" PLUGIN LIST HERE
 
 "super search
 Plugin 'kien/ctrlp.vim'
@@ -26,10 +26,14 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'tpope/vim-fugitive'
 Plugin 'niklaas/lightline-gitdiff'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
 
 " added nerdtree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+
+" ALE
+Plugin 'dense-analysis/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,16 +49,13 @@ autocmd VimEnter * wincmd p
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-"colo desert
 colo dracula
-"colo atom-dark-256
 
 "transparent
 hi Normal guibg=NONE ctermbg=NONE
-"hi NonText ctermbg=none
 
+" air-line
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
@@ -75,8 +76,8 @@ let g:lightline = {
       \ }
 
 
+"set things
 set noshowmode
-"set
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -95,6 +96,7 @@ set scrolloff=2
 set lazyredraw
 set splitbelow
 set splitright
+set updatetime=100
 
 set encoding=utf8
 set termencoding=utf-8
@@ -107,15 +109,9 @@ set incsearch  " show search matches as you type
 set smartcase  " ignore case if search pattern is all lowercase,
                "   case-sensitive otherwise
 set ignorecase " ignore case when searching
-
-"nice to have
-set list
-
-"pastetoggle
-set pastetoggle=<F2>
-
-"set mouse
-set mouse=n
+set list "nice to have
+set pastetoggle=<F2> "pastetoggle
+set mouse=n "set mouse
 
 
 " Define characters to show when you show formatting
@@ -137,12 +133,6 @@ inoremap (<cr> (<cr>)<c-o><s-o>
 "select all, copy clipboard
 map <C-a> <esc>ggVG<CR>
 
-"noremap <Leader>y "+y
-"noremap <Leader>p "+p
-"noremap <Leader>yy "+y
-"noremap <Leader>pp "+p
-
-
 "tab
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
@@ -150,7 +140,7 @@ nnoremap <C-j> :tabprevious<CR>
 nnoremap <C-k> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
 
-
+" clever tab
 function! CleverTab()
   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
     return "\<Tab>"
@@ -172,3 +162,4 @@ if has("autocmd")
     \ endif
   au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
+
