@@ -1,1 +1,5 @@
 # vimrc
+
+```
+sh install.sh
+```

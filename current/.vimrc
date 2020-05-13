@@ -42,10 +42,9 @@ filetype plugin indent on    " required
 "end of vundle
 "----------------------------------
 
-"nerdtree conf
-"autocmd VimEnter * NERDTree
+"nerdtree configs
+autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
-"let NERDTreeMapOpenInTab='<ENTER>'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
@@ -56,6 +55,7 @@ hi Normal guibg=NONE ctermbg=NONE
 
 " air-line
 let g:lightline = {
+      \ 'colorscheme': 'default',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
