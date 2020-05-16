@@ -82,6 +82,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set number "show line numbers
+set relativenumber "number line trick
 set laststatus=2 "for airline
 set t_Co=256
 set hidden
