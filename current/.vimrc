@@ -20,7 +20,7 @@ Plugin 'kien/ctrlp.vim'
 "theme stuffs
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'itchyny/lightline.vim'
-Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'arcticicestudio/nord-vim'
 
 " git
 Plugin 'tpope/vim-fugitive'
@@ -48,14 +48,14 @@ autocmd VimEnter * wincmd p
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo dracula
+colo nord
 
 "transparent
 hi Normal guibg=NONE ctermbg=NONE
 
 " air-line
 let g:lightline = {
-      \ 'colorscheme': 'default',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
