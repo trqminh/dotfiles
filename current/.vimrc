@@ -1,49 +1,41 @@
-"Vundle
+"Vim plug
 set nocompatible              " required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" --------------------------------
+call plug#begin('~/.vim/plugged')
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 
 " PLUGIN LIST HERE
 
 "super search
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 "theme stuffs
-Plugin 'dracula/vim', { 'name': 'dracula' }
-Plugin 'itchyny/lightline.vim'
-Plugin 'arcticicestudio/nord-vim'
+Plug 'dracula/vim', { 'name': 'dracula' }
+Plug 'itchyny/lightline.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'cidem/yui'
 
 " git
-Plugin 'tpope/vim-fugitive'
-Plugin 'niklaas/lightline-gitdiff'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'niklaas/lightline-gitdiff'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
 
 " added nerdtree
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 
 " ALE
-Plugin 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 " distraction-free
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-"end of vundle
+call plug#end()
 "----------------------------------
 
 " Goyo and limelight configs

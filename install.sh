@@ -1,9 +1,9 @@
-FILE=~/.vim/bundle/
-if [ -d "$FILE" ]; then
-    echo "vundle is setup"
+FILE=~/.vim/autoload/plug.vim
+if [ -f "$FILE" ]; then
+    echo "vimplug is setup"
 else 
     echo "$FILE does not exist"
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 cp ./current/.vimrc ~/.vimrc
