@@ -17,6 +17,7 @@ Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'cidem/yui'
+Plug 'junegunn/seoul256.vim'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -72,7 +73,7 @@ autocmd VimEnter * wincmd p
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo dracula
+colo seoul256
 
 "transparent
 hi Normal guibg=NONE ctermbg=NONE
