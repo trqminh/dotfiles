@@ -10,5 +10,5 @@ sh install.sh
 then
 ```
 vi
-:PluginInstall
+:PlugInstall
 ```
