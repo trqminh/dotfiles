@@ -35,6 +35,10 @@ Plugin 'jistr/vim-nerdtree-tabs'
 " ALE
 Plugin 'dense-analysis/ale'
 
+" distraction-free
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,13 +46,17 @@ filetype plugin indent on    " required
 "end of vundle
 "----------------------------------
 
+" Goyo configs
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
 "nerdtree configs
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo nord
+colo dracula
 
 "transparent
 hi Normal guibg=NONE ctermbg=NONE
