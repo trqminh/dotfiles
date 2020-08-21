@@ -159,15 +159,15 @@ map <C-a> <esc>ggVG<CR>
 "tab
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
-nnoremap <C-j> :tabprevious<CR>
-nnoremap <C-k> :tabnext<CR>
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
 
 "faster moving
-nnoremap <C-l> w
-nnoremap <C-h> b
-nnoremap <C-k> <C-u>
-nnoremap <C-j> <C-d>
+nnoremap L w
+nnoremap H b
+nnoremap K <C-u>
+nnoremap J <C-d>
 inoremap <C-l> <Right>
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
