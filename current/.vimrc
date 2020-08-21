@@ -163,15 +163,15 @@ nnoremap <C-j> :tabprevious<CR>
 nnoremap <C-k> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
 
-"rethinking hjkl from thefullsnack.com
-nnoremap L l
-nnoremap H h
-nnoremap l w
-nnoremap h b
+"faster moving
+nnoremap <C-l> w
+nnoremap <C-h> b
 nnoremap <C-k> <C-u>
 nnoremap <C-j> <C-d>
-inoremap <C-f> <Right>
-inoremap <C-b> <Left>
+inoremap <C-l> <Right>
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
 
 " clever tab
 function! CleverTab()
