@@ -3,7 +3,8 @@ set nocompatible              " required
 filetype off                  " required
 
 " --------------------------------
-call plug#begin('~/.vim/plugged')
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Plug 'VundleVim/Vundle.vim'
 
@@ -33,7 +34,8 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
-call plug#end()
+call vundle#end()            " required
+filetype plugin indent on    " required
 "----------------------------------
 
 " Goyo and limelight configs
@@ -162,16 +164,6 @@ nnoremap <C-Right> :tabnext<CR>
 nnoremap <C-j> :tabprevious<CR>
 nnoremap <C-k> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
-
-"rethinking hjkl from thefullsnack.com
-nnoremap L l
-nnoremap H h
-nnoremap l w
-nnoremap h b
-nnoremap <C-k> <C-u>
-nnoremap <C-j> <C-d>
-inoremap <C-f> <Right>
-inoremap <C-b> <Left>
 
 " clever tab
 function! CleverTab()

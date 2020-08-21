@@ -7,3 +7,4 @@ else
 fi
 
 cp ./current/.vimrc ~/.vimrc
+cp ./.ideavimrc ~/.ideavimrc

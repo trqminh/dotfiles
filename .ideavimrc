@@ -1,0 +1,24 @@
+nnoremap L l
+nnoremap H h
+nnoremap l w
+nnoremap h b
+
+nnoremap <C-k> <C-u>
+nnoremap <C-j> <C-d>
+
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+
+set relativenumber
+set number
+
+set pastetoggle=<F2>
+
+" clever tab
+function! CleverTab()
+  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+    return "\<Tab>"
+  else
+    return "\<C-N>"
+endfunction
+inoremap <Tab> <C-R>=CleverTab()<CR>
