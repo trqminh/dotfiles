@@ -1,18 +1,17 @@
-nnoremap L l
-nnoremap H h
-nnoremap l w
-nnoremap h b
-
-nnoremap <C-k> <C-u>
-nnoremap <C-j> <C-d>
-
-inoremap <C-f> <Right>
-inoremap <C-b> <Left>
-
-set relativenumber
 set number
+set relativenumber
 
 set pastetoggle=<F2>
+
+"faster moving
+nnoremap L w
+nnoremap H b
+nnoremap K <C-u>
+nnoremap J <C-d>
+inoremap <C-l> <Right>
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
 
 " clever tab
 function! CleverTab()
