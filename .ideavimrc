@@ -1,6 +1,9 @@
 set number
 set relativenumber
 
+"select all, copy clipboard
+map <C-a> <esc>ggVG<CR>
+
 "faster moving
 nnoremap L w
 nnoremap H b
