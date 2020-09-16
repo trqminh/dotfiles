@@ -8,3 +8,5 @@ fi
 
 cp ./current/.vimrc ~/.vimrc
 cp ./.ideavimrc ~/.ideavimrc
+cp -n ./fonts/Monaco-Linux.ttf ~/.local/share/fonts/
+echo Enjoy
