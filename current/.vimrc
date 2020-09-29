@@ -18,6 +18,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'cidem/yui'
 Plug 'junegunn/seoul256.vim'
+Plug 'joshdick/onedark.vim'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -70,14 +71,14 @@ autocmd VimEnter * wincmd p
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo seoul256
+colo onedark
 
 "terminal background
-"hi Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 
 " air-line
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
