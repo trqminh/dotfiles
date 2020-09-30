@@ -9,8 +9,8 @@ Plug 'VundleVim/Vundle.vim'
 
 " PLUGIN LIST HERE
 
-"super search
-Plug 'kien/ctrlp.vim'
+"search
+Plug '~/.fzf'
 
 "theme stuffs
 Plug 'dracula/vim', { 'name': 'dracula' }
@@ -18,7 +18,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'cidem/yui'
 Plug 'junegunn/seoul256.vim'
-Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -26,13 +26,16 @@ Plug 'niklaas/lightline-gitdiff'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 
-" added nerdtree
+" nerdtree
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 
 " distraction-free
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+
+" icon
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 "----------------------------------
@@ -71,14 +74,14 @@ autocmd VimEnter * wincmd p
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo onedark
+colo one
 
 "terminal background
 hi Normal guibg=NONE ctermbg=NONE
 
 " air-line
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
