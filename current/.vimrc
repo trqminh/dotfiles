@@ -74,7 +74,7 @@ autocmd VimEnter * wincmd p
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo one
+colo dracula
 
 "terminal background
 hi Normal guibg=NONE ctermbg=NONE
