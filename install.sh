@@ -17,5 +17,6 @@ fi
 
 cp ./current/.vimrc ~/.vimrc
 cp ./.ideavimrc ~/.ideavimrc
+cp ./kitty.conf ~/.config/kitty/kitty.conf
 cp -n ./fonts/Monaco-Linux.ttf ~/.local/share/fonts/
 echo DONE!!!
