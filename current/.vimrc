@@ -70,7 +70,7 @@ let g:limelight_priority = -1
 
 "nerdtree configs
 "autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+"autocmd VimEnter * wincmd p
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
