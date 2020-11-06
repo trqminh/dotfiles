@@ -74,10 +74,10 @@ let g:limelight_priority = -1
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo dracula
+colo minh_blue
 
 "terminal background
-hi Normal guibg=NONE ctermbg=NONE
+"hi Normal guibg=NONE ctermbg=NONE
 
 " air-line
 let g:lightline = {

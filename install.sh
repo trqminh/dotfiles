@@ -15,8 +15,17 @@ else
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-cp ./current/.vimrc ~/.vimrc
+FOLD=~/.vim/colors/
+if [ -d "$FOLD" ]; then
+    echo "manual configuring colorscheme is ready !"
+else 
+    echo "Create .vim/colors/ ..."
+    mkdir ~/.vim/colors/
+fi
+
+cp ./.vimrc ~/.vimrc
 cp ./.ideavimrc ~/.ideavimrc
 cp ./kitty.conf ~/.config/kitty/kitty.conf
 cp -n ./fonts/Monaco-Linux.ttf ~/.local/share/fonts/
+cp ./colors/minh_blue.vim ~/.vim/colors/
 echo DONE!!!
