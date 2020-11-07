@@ -77,7 +77,7 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 colo dracula
 
 "terminal background
-"hi Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 
 " air-line
 let g:lightline = {
