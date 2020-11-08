@@ -1,10 +1,10 @@
 # vimrc
 ## To Install
 ```
-git clone https://github.com/trqminh/vimrc.git
-cd vimrc
+git clone https://github.com/trqminh/dotfiles.git
+cd dotfiles
 ```
-### Full Installation (Vimplug, fzf, fonts,...)
+### Full Installation (Vimplug, fzf, fonts, zsh,...)
 ```
 sh install.sh
 ```
