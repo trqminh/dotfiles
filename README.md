@@ -1,4 +1,4 @@
-# vimrc
+# dotfiles
 ## To Install
 ```
 git clone https://github.com/trqminh/dotfiles.git
