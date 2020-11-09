@@ -19,6 +19,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'cidem/yui'
 Plug 'junegunn/seoul256.vim'
 Plug 'rakr/vim-one'
+Plug 'smallwat3r/vim-simplicity'
 
 " git
 Plug 'tpope/vim-fugitive'

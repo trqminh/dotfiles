@@ -7,8 +7,6 @@ else
     ~/.fzf/install
 fi
 
-sudo apt-get install neovim
-
 FILE=~/.local/share/nvim/site/autoload/plug.vim
 if [ -f "$FILE" ]; then
     echo "[vimplug]: OK"
