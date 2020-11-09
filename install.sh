@@ -17,12 +17,21 @@ fi
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-AUTO_FOLD=/home/quangminh/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+AUTO_FOLD=~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 if [ -d "$AUTO_FOLD" ]; then
     echo "[autosuggestions]: OK"
 else 
     echo "INSTALL autosuggestions-zsh..."
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
+NVIM_FOLD=~/.config/nvim/
+if [ -d "$NVIM_FOLD" ]; then
+    echo "[nvim]: OK"
+else 
+    echo "INSTALL nvim"
+    sudo apt-get install neovim
+    mkdir ~/.config/nvim/
 fi
 
 cp ./.vimrc ~/.vimrc

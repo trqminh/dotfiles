@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/quangminh/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,18 +100,18 @@ source $ZSH/oh-my-zsh.sh
 alias myenv='source ~/myenv/bin/activate'
 alias hdd='cd /media/quangminh/7b4eb1f4-5d3f-4bde-a9aa-fc022affae06/home/quangminh/Desktop'
 alias hddd='hdd && xdg-open . && exit'
-alias src='cd Desktop/git_repos/'
+alias src='cd Desktop/my_src/'
 alias docs='hdd && cd Dropbox/documents && xdg-open . && exit'
 alias aioz='ssh -p 505 aioz-air@vision.aioz.io'
 alias cam='cd /media/quangminh/7b4eb1f4-5d3f-4bde-a9aa-fc022affae06/home/quangminh/Desktop/english/ielts/books/cam && xdg-open . && exit'
 alias vi='nvim'
 alias nv='nvim'
-alias vim='nvim'
 alias ok='echo it is alright to not be fine'
 
 # virtualenv and virtualenvwrapper
-export WORKON_HOME=/home/quangminh/.virtualenvs
+export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
+#source ~/.local/bin/virtualenvwrapper.sh
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
