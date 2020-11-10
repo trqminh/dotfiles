@@ -75,7 +75,7 @@ let g:limelight_priority = -1
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo dracula
+colo elflord
 
 "terminal background
 "hi Normal guibg=NONE ctermbg=NONE
@@ -167,6 +167,7 @@ nnoremap <C-Right> :tabnext<CR>
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
+nnoremap <C-f> :FZF<CR>
 
 "faster moving
 nnoremap L w
