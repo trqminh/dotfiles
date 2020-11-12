@@ -37,7 +37,7 @@ fi
 cp ./.vimrc ~/.vimrc
 cp ./.ideavimrc ~/.ideavimrc
 cp ./kitty.conf ~/.config/kitty/kitty.conf
-cp -n ./fonts/Monaco-Linux.ttf ~/.local/share/fonts/
+cp -n ./fonts/* ~/.local/share/fonts/
 cp ./colors/minh_blue.vim ~/.vim/colors/
 cp ./init.vim ~/.config/nvim/init.vim
 cp ./.zshrc ~/.zshrc
