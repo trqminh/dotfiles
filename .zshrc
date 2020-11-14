@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 alias myenv='source ~/myenv/bin/activate'
 alias hdd='cd /media/quangminh/7b4eb1f4-5d3f-4bde-a9aa-fc022affae06/home/quangminh/Desktop'
 alias hddd='hdd && xdg-open . && exit'
-alias src='cd Desktop/my_src/'
+alias src='cd ~/Desktop/my_src/'
 alias docs='hdd && cd Dropbox/documents && xdg-open . && exit'
 alias aioz='ssh -p 505 aioz-air@vision.aioz.io'
 alias cam='cd /media/quangminh/7b4eb1f4-5d3f-4bde-a9aa-fc022affae06/home/quangminh/Desktop/english/ielts/books/cam && xdg-open . && exit'
