@@ -12,14 +12,17 @@ Plug 'VundleVim/Vundle.vim'
 "search
 Plug '~/.fzf'
 
-"theme stuffs
+" themes
 Plug 'dracula/vim', { 'name': 'dracula' }
-Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'cidem/yui'
 Plug 'junegunn/seoul256.vim'
 Plug 'rakr/vim-one'
 Plug 'smallwat3r/vim-simplicity'
+
+" line
+" Plug 'liuchengxu/eleline.vim'
+Plug 'itchyny/lightline.vim'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -80,7 +83,7 @@ colo dracula
 "terminal background
 "hi Normal guibg=NONE ctermbg=NONE
 
-" air-line
+" lightline config
 let g:lightline = {
       \ 'colorscheme': 'dracula',
       \ 'active': {
