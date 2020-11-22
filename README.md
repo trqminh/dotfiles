@@ -12,7 +12,7 @@ bash install_nvm.sh
 ```
 Some variables need to be exported, and then install what ever version of nodejs:
 ```
-nvm install 12.18.3
+nvm install v13.14.0
 ```
 ### Full Installation (Vimplug, fzf, fonts, zsh, kitty config, coc...)
 ```
