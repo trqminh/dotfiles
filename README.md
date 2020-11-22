@@ -10,9 +10,9 @@ cd dotfiles
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh -o install_nvm.sh
 bash install_nvm.sh
 ```
-Some variables need to be exported, and then install what ever version of nodejs:
+Some variables need to be exported, and then install what ever version of nodejs (included in zshrc):
 ```
-nvm install v13.14.0
+nvm install v12.18.0
 ```
 ### Full Installation (Vimplug, fzf, fonts, zsh, kitty config, coc...)
 ```
@@ -27,4 +27,8 @@ vi
 ```
 sh light_install.sh
 ```
+### Coc plugin
 There will be some errors of coc that just need to follow the instructions
+```
+:CocInstall coc-json coc-python coc-snippets coc-vimlsp
+```
