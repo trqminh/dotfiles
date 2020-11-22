@@ -41,6 +41,9 @@ Plug 'junegunn/limelight.vim'
 " icon
 Plug 'ryanoasis/vim-devicons'
 
+" completion
+Plug 'neoclide/coc.nvim'
+
 call plug#end()
 "----------------------------------
 

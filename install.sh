@@ -41,5 +41,6 @@ cp -n ./fonts/* ~/.local/share/fonts/
 cp ./colors/minh_blue.vim ~/.vim/colors/
 cp ./init.vim ~/.config/nvim/init.vim
 cp ./.zshrc ~/.zshrc
+cp ./coc-settings.json ~/.config/nvim/coc-settings.json
 
 echo DONE!!!
