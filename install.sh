@@ -34,7 +34,7 @@ else
     mkdir ~/.config/nvim/
 fi
 
-cp ./.vimrc ~/.vimrc
+cp ./init.vim ~/.vimrc
 cp ./.ideavimrc ~/.ideavimrc
 cp ./kitty.conf ~/.config/kitty/kitty.conf
 cp -n ./fonts/* ~/.local/share/fonts/
