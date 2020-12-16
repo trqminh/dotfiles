@@ -19,6 +19,7 @@ Plug 'cidem/yui'
 Plug 'junegunn/seoul256.vim'
 Plug 'rakr/vim-one'
 Plug 'smallwat3r/vim-simplicity'
+Plug 'crusoexia/vim-monokai'
 
 " line
 " Plug 'liuchengxu/eleline.vim'
@@ -81,7 +82,7 @@ let g:limelight_priority = -1
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo dracula
+colo monokai
 
 "terminal background
 "hi Normal guibg=NONE ctermbg=NONE
