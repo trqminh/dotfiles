@@ -20,6 +20,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'rakr/vim-one'
 Plug 'smallwat3r/vim-simplicity'
 Plug 'crusoexia/vim-monokai'
+Plug 'arzg/vim-colors-xcode'
 
 " line
 " Plug 'liuchengxu/eleline.vim'
@@ -82,14 +83,14 @@ let g:limelight_priority = -1
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo monokai
+colo xcodedark
 
 "terminal background
 "hi Normal guibg=NONE ctermbg=NONE
 
 " lightline config
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
