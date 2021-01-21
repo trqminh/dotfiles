@@ -107,6 +107,7 @@ alias cam='cd /media/quangminh/7b4eb1f4-5d3f-4bde-a9aa-fc022affae06/home/quangmi
 alias vi='nvim'
 alias nv='nvim'
 alias ok='echo it is alright to not be fine'
+alias ros='source /opt/ros/melodic/setup.zsh'
 
 # virtualenv and virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
@@ -120,6 +121,3 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# ros
-source /opt/ros/melodic/setup.zsh
