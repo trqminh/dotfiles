@@ -133,6 +133,7 @@ set lazyredraw
 set splitbelow
 set splitright
 set updatetime=100
+set colorcolumn=80
 
 set encoding=utf8
 set termencoding=utf-8
