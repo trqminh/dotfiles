@@ -14,13 +14,12 @@ Plug '~/.fzf'
 
 " themes
 Plug 'dracula/vim', { 'name': 'dracula' }
-Plug 'arcticicestudio/nord-vim'
-Plug 'cidem/yui'
 Plug 'junegunn/seoul256.vim'
 Plug 'rakr/vim-one'
 Plug 'smallwat3r/vim-simplicity'
 Plug 'crusoexia/vim-monokai'
 Plug 'arzg/vim-colors-xcode'
+Plug 'tomasiser/vim-code-dark'
 
 " line
 " Plug 'liuchengxu/eleline.vim'
@@ -90,7 +89,7 @@ colo xcodedark
 
 " lightline config
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'codedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
@@ -133,7 +132,7 @@ set lazyredraw
 set splitbelow
 set splitright
 set updatetime=100
-set colorcolumn=80
+set colorcolumn=90
 
 set encoding=utf8
 set termencoding=utf-8
