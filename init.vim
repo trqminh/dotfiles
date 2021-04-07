@@ -82,14 +82,14 @@ let g:limelight_priority = -1
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo xcodedark
+colo xcodelighthc
 
 "terminal background
 "hi Normal guibg=NONE ctermbg=NONE
 
 " lightline config
 let g:lightline = {
-      \ 'colorscheme': 'codedark',
+      \ 'colorscheme': 'seoul256',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
