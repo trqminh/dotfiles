@@ -25,14 +25,12 @@ sudo apt-get install rofi
 sudo apt-get install i3blocks
 sudo apt-get install pavucontrol
 sudo apt-get install xbacklight
-
 ```
 Some i3 bindings-key issues can be found [here](https://github.com/vivien/i3blocks-contrib/commit/1b3efc6e44ca2a01da2fb23ac60dbfc49bdec33c) (for sound) and [here](https://sourabhtk37.github.io/blog/post/brightness-and-volume-control-i3/) (for brightness).   
 
-There are some unsolved issues about i3wm. They are:   
+There are some my unsolved issues about i3wm. They are:   
 - A battery indicator
 - Regional screenshots
-- Bluetooth connections
 
 
 
