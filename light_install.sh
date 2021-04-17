@@ -1,2 +1,2 @@
-cp ./.ideavimrc ~/.vimrc
-cp ./.ideavimrc ~/.ideavimrc
+cp ./ideavimrc ~/.vimrc
+cp ./ideavimrc ~/.ideavimrc

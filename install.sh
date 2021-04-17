@@ -35,12 +35,13 @@ else
 fi
 
 cp ./init.vim ~/.vimrc
-cp ./.ideavimrc ~/.ideavimrc
+cp ./ideavimrc ~/.ideavimrc
 cp ./kitty.conf ~/.config/kitty/kitty.conf
 cp -n ./fonts/* ~/.local/share/fonts/
 cp ./colors/minh_blue.vim ~/.vim/colors/
 cp ./init.vim ~/.config/nvim/init.vim
-cp ./.zshrc ~/.zshrc
+cp ./zshrc ~/.zshrc
 cp ./coc-settings.json ~/.config/nvim/coc-settings.json
+cp -r ./i3/ ~/.config/
 
 echo DONE!!!
