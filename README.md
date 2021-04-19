@@ -28,7 +28,7 @@ sudo apt-get install xbacklight
 ```
 Some i3 bindings-key issues can be found [here](https://github.com/vivien/i3blocks-contrib/commit/1b3efc6e44ca2a01da2fb23ac60dbfc49bdec33c) (for sound) and [here](https://sourabhtk37.github.io/blog/post/brightness-and-volume-control-i3/) (for brightness).   
 
-There are some my unsolved issues about i3wm. They are:   
+My unsolved issues about i3wm:   
 - A battery indicator
 - Regional screenshots
 
