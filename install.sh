@@ -42,6 +42,7 @@ cp ./colors/minh_blue.vim ~/.vim/colors/
 cp ./init.vim ~/.config/nvim/init.vim
 cp ./zshrc ~/.zshrc
 cp ./coc-settings.json ~/.config/nvim/coc-settings.json
+cp ./tmux.conf ~/.tmux.conf
 cp -r ./i3/ ~/.config/
 
 echo DONE!!!
