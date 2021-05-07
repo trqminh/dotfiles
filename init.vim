@@ -45,6 +45,9 @@ Plug 'ryanoasis/vim-devicons'
 " completion
 Plug 'neoclide/coc.nvim'
 
+" indent
+Plug 'Yggdroot/indentLine'
+
 call plug#end()
 "----------------------------------
 
