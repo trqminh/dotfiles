@@ -24,12 +24,15 @@ Plug 'tomasiser/vim-code-dark'
 " line
 " Plug 'liuchengxu/eleline.vim'
 Plug 'itchyny/lightline.vim'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'niklaas/lightline-gitdiff'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 
 " nerdtree
 Plug 'scrooloose/nerdtree'
@@ -112,6 +115,8 @@ let g:lightline = {
       \ },
       \ }
 
+" airline config
+" let g:airline_theme='bubblegum'
 
 "set things
 set noshowmode
