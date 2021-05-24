@@ -141,6 +141,7 @@ set splitbelow
 set splitright
 set updatetime=100
 set colorcolumn=90
+highlight ColorColumn ctermbg=238
 
 set encoding=utf8
 set termencoding=utf-8
