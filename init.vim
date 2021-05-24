@@ -88,7 +88,7 @@ let g:limelight_priority = -1
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo codedark
+colo seoul256-light
 
 "terminal background
 "hi Normal guibg=NONE ctermbg=NONE
