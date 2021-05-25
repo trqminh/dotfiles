@@ -156,7 +156,7 @@ set smartcase  " ignore case if search pattern is all lowercase,
 set ignorecase " ignore case when searching
 set list "nice to have
 set pastetoggle=<F2> "pastetoggle
-set mouse=n "set mouse
+set mouse=a "set mouse
 
 
 " Define characters to show when you show formatting
