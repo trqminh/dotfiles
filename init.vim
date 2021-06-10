@@ -32,7 +32,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'niklaas/lightline-gitdiff'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
-Plug 'mhinz/vim-signify'
 
 " nerdtree
 Plug 'scrooloose/nerdtree'
