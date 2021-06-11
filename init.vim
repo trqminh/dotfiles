@@ -87,14 +87,14 @@ let g:limelight_priority = -1
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo codedark
+colo xcodewwdc
 
 "terminal background
 "hi Normal guibg=NONE ctermbg=NONE
 
 " lightline config
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'default',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'filename', 'readonly', 'modified' ],
@@ -139,8 +139,8 @@ set lazyredraw
 set splitbelow
 set splitright
 set updatetime=100
-set colorcolumn=90
-highlight ColorColumn ctermbg=238
+" set colorcolumn=100
+" highlight ColorColumn ctermbg=238
 
 set encoding=utf8
 set termencoding=utf-8
