@@ -20,6 +20,7 @@ Plug 'smallwat3r/vim-simplicity'
 Plug 'crusoexia/vim-monokai'
 Plug 'arzg/vim-colors-xcode'
 Plug 'tomasiser/vim-code-dark'
+Plug 'morhetz/gruvbox'
 
 " line
 " Plug 'liuchengxu/eleline.vim'
@@ -87,7 +88,7 @@ let g:limelight_priority = -1
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "color scheme
-colo dracula
+colo gruvbox
 
 "terminal background
 "hi Normal guibg=NONE ctermbg=NONE
