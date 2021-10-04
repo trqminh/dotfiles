@@ -1,6 +1,33 @@
+"Vim plug
+set nocompatible              " required
+filetype off                  " required
+
+" --------------------------------
+call plug#begin('~/.vim/plugged')
+
+Plug 'VundleVim/Vundle.vim'
+
+" PLUGIN LIST HERE
+
+"search
+Plug '~/.fzf'
+
+" git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" minimap
+Plug 'severin-lemaignan/vim-minimap'
+
+call plug#end()
+"----------------------------------------------------------
+"----------------------------------------------------------
+
+
+
 syntax on
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set ai
 set number
@@ -8,6 +35,12 @@ set relativenumber
 set hlsearch
 set ruler
 set autoindent
+
+set noswapfile
+set nobackup
+set lazyredraw
+set updatetime=100
+set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
 colo peachpuff
