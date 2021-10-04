@@ -62,6 +62,8 @@ nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
 
+nnoremap <C-f> :FZF<CR>
+
 "faster moving
 nnoremap L w
 nnoremap H b
