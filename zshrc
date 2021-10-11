@@ -116,15 +116,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias myenv='source ~/myenv/bin/activate'
-alias hdd='cd /media/quangminh/7b4eb1f4-5d3f-4bde-a9aa-fc022affae06/home/quangminh/Desktop'
-alias hddd='hdd && xdg-open . && exit'
 alias src='cd ~/Desktop/my_src/'
-alias docs='hdd && cd Dropbox/documents && xdg-open . && exit'
-alias aioz='ssh -p 505 aioz-air@vision.aioz.io'
-alias cam='cd /media/quangminh/7b4eb1f4-5d3f-4bde-a9aa-fc022affae06/home/quangminh/Desktop/english/ielts/books/cam && xdg-open . && exit'
 alias vi='nvim'
 alias nv='nvim'
-alias ok='echo it is alright to not be fine'
 alias ros='source /opt/ros/melodic/setup.zsh'
 
 # virtualenv and virtualenvwrapper
@@ -140,5 +134,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -9,21 +9,25 @@ Plug 'VundleVim/Vundle.vim'
 
 " PLUGIN LIST HERE
 
-"search
+" search
 Plug '~/.fzf'
 
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" minimap
-Plug 'severin-lemaignan/vim-minimap'
+" theme
+Plug 'morhetz/gruvbox'
+
+" nerdtree
+Plug 'preservim/nerdtree'
 
 call plug#end()
 "----------------------------------------------------------
 "----------------------------------------------------------
 
-
+" nerd tree toggle
+noremap <Leader>n :NERDTreeToggle<CR>
 
 syntax on
 set tabstop=4
@@ -43,7 +47,8 @@ set updatetime=100
 set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
-colo peachpuff
+colo gruvbox
+"set bg=dark
 set mouse=a
 
 "For proper tabbing and bracket insertion"
