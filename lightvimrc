@@ -17,7 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " theme
-Plug 'morhetz/gruvbox'
+Plug 'trqminh/molokai'
 
 " nerdtree
 Plug 'preservim/nerdtree'
@@ -47,7 +47,7 @@ set updatetime=100
 set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
-colo gruvbox
+colo molokai
 set bg=dark
 highlight Normal ctermbg=NONE
 set mouse=a
