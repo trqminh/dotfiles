@@ -49,6 +49,7 @@ highlight Comment ctermfg=green
 
 colo gruvbox
 set bg=dark
+highlight Normal ctermbg=NONE
 set mouse=a
 
 "For proper tabbing and bracket insertion"
