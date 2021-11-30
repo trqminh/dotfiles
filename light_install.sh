@@ -28,3 +28,4 @@ fi
 cp ./lightvimrc ~/.vimrc
 cp ./ideavimrc ~/.ideavimrc
 cp ./tmux.conf ~/.tmux.conf
+cp ./settings.json ~/.config/Code/User/settings.json
