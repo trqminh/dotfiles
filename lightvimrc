@@ -52,6 +52,7 @@ highlight Comment ctermfg=green
 colo molokai
 set bg=dark
 highlight clear LineNr
+highlight LineNr ctermfg=242
 highlight Normal ctermbg=NONE
 set mouse=a
 
