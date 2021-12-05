@@ -18,6 +18,7 @@ Plug 'airblade/vim-gitgutter'
 
 " theme
 Plug 'trqminh/molokai'
+Plug 'morhetz/gruvbox'
 
 " nerdtree
 Plug 'preservim/nerdtree'
@@ -47,11 +48,15 @@ set updatetime=100
 set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
-colo molokai
-set bg=dark
-highlight clear LineNr
-highlight LineNr ctermfg=242
+colo gruvbox
+
+"colo molokai
+"highlight clear LineNr
+"highlight LineNr ctermfg=242
+
 highlight Normal ctermbg=NONE
+
+set bg=dark
 set mouse=a
 
 "For proper tabbing and bracket insertion"
