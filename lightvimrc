@@ -48,7 +48,7 @@ set updatetime=100
 set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
-colo gruvbox
+"colo gruvbox
 
 "colo molokai
 "highlight clear LineNr
