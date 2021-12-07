@@ -48,15 +48,16 @@ set updatetime=100
 set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
+colo peachpuff
 "colo gruvbox
 
 "colo molokai
 "highlight clear LineNr
 "highlight LineNr ctermfg=242
 
+"set bg=dark
 highlight Normal ctermbg=NONE
 
-set bg=dark
 set mouse=a
 
 "For proper tabbing and bracket insertion"
