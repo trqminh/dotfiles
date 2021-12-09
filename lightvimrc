@@ -48,14 +48,13 @@ set updatetime=100
 set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
-colo peachpuff
-"colo gruvbox
+colo gruvbox
 
 "colo molokai
 "highlight clear LineNr
 "highlight LineNr ctermfg=242
 
-"set bg=dark
+set bg=dark
 highlight Normal ctermbg=NONE
 
 set mouse=a
@@ -98,8 +97,8 @@ endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
 " gitgutter
-highlight clear SignColumn
-highlight GitGutterAdd    guifg=#009900 ctermfg=2
-highlight GitGutterChange guifg=#bbbb00 ctermfg=3
-highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+" highlight clear SignColumn
+" highlight GitGutterAdd    guifg=#009900 ctermfg=2
+" highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+" highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
