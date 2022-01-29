@@ -13,7 +13,9 @@ bash light_install.sh
 ```
 Install fonts
 ```
+mkdir ~/.local/share/fonts/
 cp -n ./fonts/* ~/.local/share/fonts/
+fc-cache -f -v
 ```
 
 
