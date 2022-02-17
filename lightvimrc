@@ -48,14 +48,15 @@ set updatetime=100
 set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
-colo peachpuff
+"colo peachpuff
 
-"colo molokai
-"highlight clear LineNr
-"highlight LineNr ctermfg=242
+set bg=dark
 
-"set bg=dark
-"highlight Normal ctermbg=NONE
+colo molokai
+highlight clear LineNr
+highlight LineNr ctermfg=242
+highlight Normal ctermbg=NONE
+
 
 set mouse=a
 
