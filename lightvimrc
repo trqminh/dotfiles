@@ -52,7 +52,7 @@ highlight Comment ctermfg=green
 
 set bg=dark
 
-colo molokai
+colo gruvbox
 highlight clear LineNr
 highlight LineNr ctermfg=242
 highlight Normal ctermbg=NONE
