@@ -19,6 +19,7 @@ Plug 'airblade/vim-gitgutter'
 " theme
 Plug 'trqminh/molokai'
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " nerdtree
 Plug 'preservim/nerdtree'
@@ -48,14 +49,8 @@ set updatetime=100
 set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
-"colo peachpuff
-
 set bg=dark
-
-colo gruvbox
-highlight clear LineNr
-highlight LineNr ctermfg=242
-highlight Normal ctermbg=NONE
+colo dracula
 
 
 set mouse=a
@@ -99,7 +94,7 @@ inoremap <Tab> <C-R>=CleverTab()<CR>
 
 " gitgutter
 " highlight clear SignColumn
-highlight GitGutterAdd    guifg=#009900 ctermfg=2
-highlight GitGutterChange guifg=#bbbb00 ctermfg=3
-highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+highlight DiffAdd ctermfg=231 ctermbg=65
+highlight DiffChange ctermfg=white ctermbg=darkyellow
+highlight DiffDelete ctermfg=white ctermbg=darkmagenta
 
