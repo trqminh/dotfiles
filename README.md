@@ -1,15 +1,16 @@
 # dotfiles
-Vim, tmux, kitty
+vim, tmux
 ## preferences
-I use vim with nerdtree, fzf, and git gutter. With tmux, I use the config from geohot and also have some modifications.
+- vim: with nerdtree, fzf, and git gutter.   
+- tmux: config from geohot + some modifications.
 ## Installation
 ```
 git clone https://github.com/trqminh/dotfiles.git
 cd dotfiles
 ```
-Install tmux, vim, and kitty config
+Install vim plug, fzf, and transfer vim + tmux config
 ```
-bash light_install.sh
+bash install.sh
 ```
 Install fonts
 ```

@@ -1,7 +1,0 @@
-{
-    "workbench.colorTheme": "Default Dark+",
-    "vim.vimrc.enable": true,
-    "editor.fontFamily": "'Haskplex', 'monospace'",
-    "editor.fontSize": 15,
-    "terminal.integrated.fontSize": 15
-}
