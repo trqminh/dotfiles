@@ -20,6 +20,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'trqminh/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'joshdick/onedark.vim'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 " nerdtree
 Plug 'preservim/nerdtree'
@@ -49,10 +51,7 @@ set updatetime=100
 set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
-set bg=dark
-colo dracula
-
-
+colo catppuccin_mocha
 set mouse=a
 
 "For proper tabbing and bracket insertion"
@@ -98,3 +97,6 @@ highlight DiffAdd ctermfg=231 ctermbg=65
 highlight DiffChange ctermfg=white ctermbg=darkyellow
 highlight DiffDelete ctermfg=white ctermbg=darkmagenta
 
+highlight GitGutterAdd ctermfg=231 ctermbg=65
+highlight GitGutterChange ctermfg=white ctermbg=darkyellow
+highlight GitGutterDelete ctermfg=white ctermbg=darkmagenta
