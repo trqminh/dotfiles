@@ -20,8 +20,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'trqminh/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'joshdick/onedark.vim'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'overcache/NeoSolarized'
 
 " nerdtree
 Plug 'preservim/nerdtree'
@@ -51,7 +51,16 @@ set updatetime=100
 set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
-colo catppuccin_mocha
+" This is only necessary if you use "set termguicolors".
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set background=dark
+set t_Co=256
+set termguicolors
+colorscheme NeoSolarized
+highlight clear LineNr
+
 set mouse=a
 
 "For proper tabbing and bracket insertion"
@@ -91,12 +100,3 @@ function! CleverTab()
 endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
-" gitgutter
-" highlight clear SignColumn
-highlight DiffAdd ctermfg=231 ctermbg=65
-highlight DiffChange ctermfg=white ctermbg=darkyellow
-highlight DiffDelete ctermfg=white ctermbg=darkmagenta
-
-highlight GitGutterAdd ctermfg=231 ctermbg=65
-highlight GitGutterChange ctermfg=white ctermbg=darkyellow
-highlight GitGutterDelete ctermfg=white ctermbg=darkmagenta
