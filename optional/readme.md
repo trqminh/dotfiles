@@ -2,6 +2,7 @@
 - nvim + coc (root command required)
 ### 1. Steps
 ```
+cd optional/
 sh optional_install.sh
 nvm install v12.18.0
 :PlugInstall

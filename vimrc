@@ -17,14 +17,18 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " theme
-Plug 'trqminh/molokai'
-Plug 'morhetz/gruvbox'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'overcache/NeoSolarized'
+
+" code completetion
+if has('nvim')
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
 
 " nerdtree
 Plug 'preservim/nerdtree'
+
+" Indent
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 "----------------------------------------------------------
