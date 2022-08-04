@@ -4,6 +4,7 @@
 ```
 cd optional/
 sh optional_install.sh
+source ~/.bashrc
 nvm install v12.18.0
 :PlugInstall
 :CocInstall coc-json coc-python coc-snippets coc-vimlsp
