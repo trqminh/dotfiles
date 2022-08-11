@@ -21,7 +21,7 @@ Plug 'overcache/NeoSolarized'
 
 " code completetion
 if has('nvim')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
 " nerdtree
@@ -104,3 +104,8 @@ function! CleverTab()
 endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
+" insert cursor
+if !has('nvim')
+  let &t_SI = "\e[6 q"
+  let &t_EI = "\e[2 q"
+endif
