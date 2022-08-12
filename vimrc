@@ -17,7 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " theme
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'NLKNguyen/papercolor-theme'
 
 " code completetion
 if has('nvim')
@@ -62,7 +62,7 @@ highlight Comment ctermfg=green
 set background=dark
 set t_Co=256
 set termguicolors
-colorscheme catppuccin_macchiato
+colorscheme PaperColor
 
 set mouse=a
 
