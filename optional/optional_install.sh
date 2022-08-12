@@ -8,8 +8,8 @@ else
     sudo apt-get install neovim
     mkdir ~/.config/nvim/
     echo "alias vi='nvim'" >> ~/.bashrc
-    cp ../vimrc ~/.config/nvim/init.vim
 fi
+cp ../vimrc ~/.config/nvim/init.vim
 
 FILE=~/.local/share/nvim/site/autoload/plug.vim
 if [ -f "$FILE" ]; then

@@ -17,7 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " theme
-Plug 'overcache/NeoSolarized'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 " code completetion
 if has('nvim')
@@ -62,8 +62,7 @@ highlight Comment ctermfg=green
 set background=dark
 set t_Co=256
 set termguicolors
-colorscheme NeoSolarized
-highlight clear LineNr
+colorscheme catppuccin_macchiato
 
 set mouse=a
 
