@@ -17,7 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " theme
-Plug 'crusoexia/vim-monokai'
+Plug 'overcache/NeoSolarized'
 
 " code completetion
 if has('nvim')
@@ -62,7 +62,7 @@ highlight Comment ctermfg=green
 set background=dark
 set t_Co=256
 set termguicolors
-colorscheme monokai
+colorscheme NeoSolarized
 
 set mouse=a
 
