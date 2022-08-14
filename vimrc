@@ -17,7 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " theme
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'crusoexia/vim-monokai'
 
 " code completetion
 if has('nvim')
@@ -62,7 +62,7 @@ highlight Comment ctermfg=green
 set background=dark
 set t_Co=256
 set termguicolors
-colorscheme PaperColor
+colorscheme monokai
 
 set mouse=a
 
