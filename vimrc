@@ -108,3 +108,7 @@ if !has('nvim')
   let &t_SI = "\e[6 q"
   let &t_EI = "\e[2 q"
 endif
+
+" gitgutter signs
+let g:gitgutter_sign_added = '❙'
+let g:gitgutter_sign_modified = '▋'
