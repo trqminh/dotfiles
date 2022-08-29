@@ -65,6 +65,7 @@ set termguicolors
 colorscheme NeoSolarized
 
 set mouse=a
+set ttymouse=xterm2
 
 "For proper tabbing and bracket insertion"
 inoremap {<cr> {<cr>}<c-o><s-o>
