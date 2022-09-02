@@ -26,6 +26,7 @@ endif
 
 " nerdtree
 Plug 'preservim/nerdtree'
+Plug 'baopham/vim-nerdtree-unfocus'
 
 " Indent
 Plug 'Yggdroot/indentLine'
@@ -113,3 +114,9 @@ endif
 " gitgutter signs
 let g:gitgutter_sign_added = '❙'
 let g:gitgutter_sign_modified = '▋'
+
+" nerdtree config
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+" close nerdtree when close tab
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
