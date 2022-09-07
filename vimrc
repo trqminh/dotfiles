@@ -116,6 +116,8 @@ let g:gitgutter_sign_added = '❙'
 let g:gitgutter_sign_modified = '▋'
 
 " nerdtree config
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " close nerdtree when close tab
