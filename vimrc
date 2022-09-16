@@ -112,7 +112,7 @@ if !has('nvim')
 endif
 
 " gitgutter signs
-let g:gitgutter_sign_added = '❙'
+let g:gitgutter_sign_added = '▕'
 let g:gitgutter_sign_modified = '▋'
 
 " nerdtree config
@@ -122,3 +122,5 @@ autocmd VimEnter * NERDTree | wincmd p
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " close nerdtree when close tab
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" nerdtree to the right
+let g:NERDTreeWinPos = "right"
