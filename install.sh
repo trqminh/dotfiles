@@ -18,5 +18,4 @@ fi
 
 
 cp ./vimrc ~/.vimrc
-cp ./ideavimrc ~/.ideavimrc
 cp ./tmux.conf ~/.tmux.conf
