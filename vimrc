@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug '~/.fzf'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 
