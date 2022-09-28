@@ -16,6 +16,7 @@ set ruler
 set mouse=a
 set ttymouse=xterm2
 
+set updatetime=100
 
 highlight Comment ctermfg=green
 set bg=dark
