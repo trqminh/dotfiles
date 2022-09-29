@@ -17,5 +17,15 @@ else
 fi
 
 
+FOLD=~/.vim/pack/plugins/start/vim-dim
+if [ -d "$FOLD" ]; then
+    echo "[vim-dim]: OK"
+else
+    echo "INSTALL vim-dim..."
+    git clone --branch 1.x git@github.com:jeffkreeftmeijer/vim-dim.git ~/.vim/pack/plugins/start/vim-dim
+fi
+
+
+
 cp ./vimrc ~/.vimrc
 cp ./tmux.conf ~/.tmux.conf
