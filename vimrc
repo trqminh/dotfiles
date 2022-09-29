@@ -1,9 +1,10 @@
+" Plugs
 call plug#begin('~/.vim/plugged')
 Plug '~/.fzf'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 
-
+" base 
 syntax on
 set tabstop=4
 set shiftwidth=4
@@ -12,18 +13,18 @@ set ai
 set number
 set hlsearch
 set ruler
-
-set mouse=a
-set ttymouse=xterm2
-
 set updatetime=100
-
-highlight Comment ctermfg=green
-set bg=dark
-
 set noswapfile
 set nobackup
 
+" mouse
+set mouse=a
+set ttymouse=xterm2
+
+" color
+highlight Comment ctermfg=green
+set bg=dark
+color dim
 
 " clever tab
 function! CleverTab()
