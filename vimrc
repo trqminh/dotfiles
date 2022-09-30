@@ -35,16 +35,12 @@ call plug#end()
 "----------------------------------------------------------
 "----------------------------------------------------------
 
-" nerd tree toggle
-noremap <Leader>n :NERDTreeToggle<CR>
-
 syntax on
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set ai
 set number
-"set relativenumber
 set hlsearch
 set ruler
 set autoindent
@@ -53,7 +49,6 @@ set noswapfile
 set nobackup
 set lazyredraw
 set updatetime=100
-set pastetoggle=<F2> "pastetoggle
 highlight Comment ctermfg=green
 
 " This is only necessary if you use "set termguicolors".
@@ -68,29 +63,6 @@ colorscheme NeoSolarized
 set mouse=a
 set ttymouse=xterm2
 
-"For proper tabbing and bracket insertion"
-inoremap {<cr> {<cr>}<c-o><s-o>
-inoremap [<cr> [<cr>]<c-o><s-o>
-inoremap (<cr> (<cr>)<c-o><s-o>
-
-
-"select all, copy clipboard
-map <C-a> <esc>ggVG<CR>
-
-"tab
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
-nnoremap <C-h> :tabprevious<CR>
-nnoremap <C-l> :tabnext<CR>
-nnoremap <C-t> :tabnew<CR>
-
-nnoremap <C-f> :FZF<CR>
-
-"faster moving
-nnoremap L w
-nnoremap H b
-nnoremap K <C-u>
-nnoremap J <C-d>
 inoremap <C-l> <Right>
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
@@ -113,9 +85,10 @@ endif
 
 " gitgutter signs
 let g:gitgutter_sign_added = '▕'
-let g:gitgutter_sign_modified = '▋'
 
 " nerdtree config
+" nerd tree toggle
+noremap <Leader>n :NERDTreeToggle<CR>
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 " Open the existing NERDTree on each new tab.
