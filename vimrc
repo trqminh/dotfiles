@@ -4,11 +4,6 @@ filetype off                  " required
 
 " --------------------------------
 call plug#begin('~/.vim/plugged')
-
-Plug 'VundleVim/Vundle.vim'
-
-" PLUGIN LIST HERE
-
 " search
 Plug '~/.fzf'
 
@@ -27,9 +22,6 @@ endif
 " nerdtree
 Plug 'preservim/nerdtree'
 Plug 'baopham/vim-nerdtree-unfocus'
-
-" Indent
-Plug 'Yggdroot/indentLine'
 
 call plug#end()
 "----------------------------------------------------------
@@ -51,9 +43,6 @@ set lazyredraw
 set updatetime=100
 highlight Comment ctermfg=green
 
-" This is only necessary if you use "set termguicolors".
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 set background=dark
 set t_Co=256
@@ -75,14 +64,10 @@ function! CleverTab()
 endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
-" insert cursor
-if !has('nvim')
-  let &t_SI = "\e[6 q"
-  let &t_EI = "\e[2 q"
-endif
 
 " gitgutter signs
-let g:gitgutter_sign_added = '▕'
+let g:gitgutter_sign_added    = '┃'
+let g:gitgutter_sign_modified = '┋'
 
 " nerdtree config
 " nerd tree toggle
