@@ -39,6 +39,7 @@ set autoindent
 
 set noswapfile
 set nobackup
+set nofixendofline
 set lazyredraw
 set updatetime=100
 highlight Comment ctermfg=green
