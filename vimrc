@@ -41,14 +41,16 @@ set noswapfile
 set nobackup
 set nofixendofline
 set lazyredraw
-set updatetime=100
+"set updatetime=100
 highlight Comment ctermfg=green
 
 
 set background=dark
-set t_Co=256
-set termguicolors
-colorscheme NeoSolarized
+colo dim
+hi clear SignColumn
+"set t_Co=256
+"set termguicolors
+"colorscheme NeoSolarized
 
 set mouse=a
 set ttymouse=xterm2
