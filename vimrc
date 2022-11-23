@@ -13,6 +13,7 @@ Plug 'airblade/vim-gitgutter'
 
 " theme
 Plug 'overcache/NeoSolarized'
+Plug 'tomasiser/vim-code-dark'
 
 " code completetion
 if has('nvim')
@@ -46,8 +47,8 @@ highlight Comment ctermfg=green
 
 
 set background=dark
-colo dim
-hi clear SignColumn
+colo codedark
+"hi clear SignColumn
 "set t_Co=256
 "set termguicolors
 "colorscheme NeoSolarized
