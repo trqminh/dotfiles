@@ -10,10 +10,11 @@ Plug '~/.fzf'
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'zivyangll/git-blame.vim'
 
 " theme
 Plug 'overcache/NeoSolarized'
-Plug 'tomasiser/vim-code-dark'
+Plug 'arcticicestudio/nord-vim'
 
 " code completetion
 if has('nvim')
@@ -37,6 +38,7 @@ set number
 set hlsearch
 set ruler
 set autoindent
+set cursorline
 
 set noswapfile
 set nobackup
@@ -47,11 +49,11 @@ highlight Comment ctermfg=green
 
 
 set background=dark
-colo codedark
 "hi clear SignColumn
-"set t_Co=256
-"set termguicolors
+set t_Co=256
+set termguicolors
 "colorscheme NeoSolarized
+colo nord
 
 set mouse=a
 set ttymouse=xterm2
