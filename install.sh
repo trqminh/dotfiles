@@ -17,5 +17,8 @@ else
 fi
 
 
-cp ./vimrc ~/.vimrc
-cp ./tmux.conf ~/.tmux.conf
+cp vim/vimrc ~/.vimrc
+
+tmux source-file tmux/tmux-reset
+tmux source-file tmux/solarized_tmux.conf
+cp tmux/solarized_tmux.conf ~/.tmux.conf

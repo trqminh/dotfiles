@@ -1,9 +1,9 @@
-## Optional installation
+## Nvim installation
 - nvim + coc (root command required)
 ### 1. Steps
 ```
-cd optional/
-sh optional_install.sh
+cd nvim/
+sh nvim_install.sh
 source ~/.bashrc
 nvm install v14
 :PlugInstall

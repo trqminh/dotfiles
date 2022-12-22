@@ -14,7 +14,6 @@ Plug 'zivyangll/git-blame.vim'
 
 " theme
 Plug 'overcache/NeoSolarized'
-Plug 'arcticicestudio/nord-vim'
 
 " code completetion
 if has('nvim')
@@ -52,8 +51,7 @@ set background=dark
 "hi clear SignColumn
 set t_Co=256
 set termguicolors
-"colorscheme NeoSolarized
-colo nord
+colorscheme NeoSolarized
 
 set mouse=a
 set ttymouse=xterm2
