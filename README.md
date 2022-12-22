@@ -1,8 +1,8 @@
 # dotfiles
 vim, tmux
 ## preferences
-- vim: with nerdtree, fzf, and git gutter.   
-- tmux: config from geohot + some modifications.
+- regarding vim, nerdtree, fzf, and gits.   
+- regarding tmux, my own custom solarized colors and geohot's key bindings 
 ## Installation
 ```
 git clone https://github.com/trqminh/dotfiles.git
