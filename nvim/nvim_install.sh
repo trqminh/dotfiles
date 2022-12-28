@@ -9,7 +9,6 @@ else
     mkdir ~/.config/nvim/
     echo "alias vi='nvim'" >> ~/.bashrc
 fi
-cp ../vim/vimrc ~/.config/nvim/init.vim
 
 FILE=~/.local/share/nvim/site/autoload/plug.vim
 if [ -f "$FILE" ]; then
@@ -34,3 +33,4 @@ else
     echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc
 fi
 
+cp vim/vimrc ~/.config/nvim/init.vim
