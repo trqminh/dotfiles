@@ -51,7 +51,7 @@ set background=dark
 "hi clear SignColumn
 set t_Co=256
 set termguicolors
-colorscheme NeoSolarized
+colorscheme dim
 
 set mouse=a
 if !has('nvim')
@@ -81,10 +81,10 @@ let g:gitgutter_sign_modified = '┋'
 noremap <Leader>n :NERDTreeToggle<CR>
 
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 
 " Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 " close nerdtree when close tab
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

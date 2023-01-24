@@ -1,3 +1,3 @@
 tmux source-file tmux/tmux-reset
-tmux source-file tmux/solarized_tmux.conf
-cp tmux/solarized_tmux.conf ~/.tmux.conf
+tmux source-file tmux/$1.conf
+cp tmux/$1.conf ~/.tmux.conf
