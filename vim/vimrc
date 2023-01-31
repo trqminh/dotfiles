@@ -12,12 +12,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'zivyangll/git-blame.vim'
 
-" theme
-Plug 'overcache/NeoSolarized'
-
-" code completetion
 if has('nvim')
+  " code completetion
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " theme
+  Plug 'bluz71/vim-nightfly-colors'
 endif
 
 " nerdtree
@@ -28,6 +27,7 @@ call plug#end()
 "----------------------------------------------------------
 "----------------------------------------------------------
 
+" OPTIONS
 syntax on
 set tabstop=4
 set shiftwidth=4
@@ -37,7 +37,6 @@ set number
 set hlsearch
 set ruler
 set autoindent
-set cursorline
 
 set noswapfile
 set nobackup
@@ -45,23 +44,33 @@ set nofixendofline
 set lazyredraw
 "set updatetime=100
 highlight Comment ctermfg=green
-
-
-set background=dark
-"hi clear SignColumn
-set t_Co=256
-set termguicolors
-colorscheme dim
-
 set mouse=a
 if !has('nvim')
   set ttymouse=xterm2
 endif
 
-" key map
-nnoremap <C-p> :FZF<CR>
 
-" clever tab
+" COLOR
+set background=dark
+if !has('nvim')
+  colorscheme dim
+  hi clear SignColumn
+endif
+
+
+if has('nvim')
+  set termguicolors
+  colorscheme nightfly
+endif
+
+
+" KEY MAP
+nnoremap <C-p> :FZF<CR>
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+inoremap jk <ESC>
+
+
+" CLEVER TAB
 function! CleverTab()
   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
     return "\<Tab>"
@@ -72,22 +81,24 @@ endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
 
-" gitgutter signs
+" GITGUTTER SIGNS
 let g:gitgutter_sign_added    = '┃'
 let g:gitgutter_sign_modified = '┋'
+
+
 
 " NERDTREE CONFIG
 " nerd tree toggle
 noremap <Leader>n :NERDTreeToggle<CR>
 
 " Start NERDTree and put the cursor back in the other window.
-" autocmd VimEnter * NERDTree | wincmd p
+autocmd VimEnter * NERDTree | wincmd p
 
 " Open the existing NERDTree on each new tab.
-" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 " close nerdtree when close tab
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " nerdtree to the right
-" let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "right"
