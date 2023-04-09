@@ -17,6 +17,7 @@ if has('nvim')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " theme
   Plug 'bluz71/vim-nightfly-colors'
+  Plug 'NLKNguyen/papercolor-theme'
 endif
 
 " nerdtree
@@ -37,6 +38,7 @@ set number
 set hlsearch
 set ruler
 set autoindent
+set cursorline
 
 set noswapfile
 set nobackup
@@ -51,8 +53,8 @@ endif
 
 
 " COLOR
-set background=dark
 if !has('nvim')
+  set background=dark
   colorscheme dim
   hi clear SignColumn
 endif
@@ -60,7 +62,12 @@ endif
 
 if has('nvim')
   set termguicolors
-  colorscheme nightfly
+  if strftime("%H") < 23
+    set background=light
+  else
+    set background=dark
+  endif
+  colorscheme PaperColor
 endif
 
 
