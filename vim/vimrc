@@ -18,6 +18,7 @@ if has('nvim')
   " theme
   Plug 'bluz71/vim-nightfly-colors'
   Plug 'NLKNguyen/papercolor-theme'
+  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 endif
 
 " nerdtree
@@ -63,7 +64,7 @@ endif
 if has('nvim')
   set termguicolors
   set background=dark
-  colorscheme nightfly
+  colorscheme tokyonight
 endif
 
 
