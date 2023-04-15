@@ -62,12 +62,8 @@ endif
 
 if has('nvim')
   set termguicolors
-  if strftime("%H") < 23
-    set background=light
-  else
-    set background=dark
-  endif
-  colorscheme PaperColor
+  set background=dark
+  colorscheme nightfly
 endif
 
 
