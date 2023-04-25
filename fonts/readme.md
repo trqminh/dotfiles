@@ -1,4 +1,6 @@
 Install fonts
+
+### On Ubuntu
 ```
 mkdir ~/.local/share/fonts/
 cp -n ./fonts/* ~/.local/share/fonts/
