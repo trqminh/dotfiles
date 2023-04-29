@@ -25,6 +25,7 @@ endif
 " nerdtree
 Plug 'preservim/nerdtree'
 Plug 'baopham/vim-nerdtree-unfocus'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 "----------------------------------------------------------

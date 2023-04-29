@@ -1,28 +1,28 @@
 # dotfiles
-all at once:
-```
-bash install.sh
-```
-
-tmux:
+- tmux:
 ```
 bash tmux/tmux_install.sh tmux
 bash tmux/tmux_install.sh solarized_tmux
 ```
 
-vim:
+- vim:
 ```
 bash vim/vim_install.sh
 ```
-
-nvim:   
-see [nvim readme](nvim/readme.md)
-
-dim color:
+dim color for vim:
 ```
 git clone --branch 1.x git@github.com:jeffkreeftmeijer/vim-dim.git ~/.vim/pack/plugins/start/vim-dim
 ```
 
+
+- nvim:   
+see [nvim readme](nvim/readme.md) for details
+
+
+- all at once:
 ```
-git clone --branch 1.x git@github.com:jeffkreeftmeijer/vim-dim.git ~/.local/share/nvim/site/pack/plugins/start/vim-dim
+bash install.sh
 ```
+
+- screenshots:
+![alt text](screenshot.png "nvim with tmux on kitty terminal, coc for python interpreter, git gutter, nerd tree, solarized theme")
