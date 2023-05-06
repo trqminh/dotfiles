@@ -58,7 +58,7 @@ endif
 " COLOR
 if !has('nvim')
   set background=dark
-  colorscheme dim
+  colorscheme default
   hi clear SignColumn
 endif
 
