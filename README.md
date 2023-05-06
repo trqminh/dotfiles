@@ -9,17 +9,12 @@ bash tmux/tmux_install.sh solarized_tmux
 ```
 bash vim/vim_install.sh
 ```
-dim color for vim:
-```
-git clone --branch 1.x git@github.com:jeffkreeftmeijer/vim-dim.git ~/.vim/pack/plugins/start/vim-dim
-```
-
 
 - nvim:   
 see [nvim readme](nvim/readme.md) for details
 
 
-- all at once:
+- all at once, but still need to see [nvim readme](nvim/readme.md) for details:
 ```
 bash install.sh
 ```
