@@ -22,6 +22,9 @@ if has('nvim')
   Plug 'Tsuzat/NeoSolarized.nvim', { 'branch': 'master' }
 endif
 
+"vim theme
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 " nerdtree
 Plug 'preservim/nerdtree'
 Plug 'baopham/vim-nerdtree-unfocus'
@@ -58,7 +61,7 @@ endif
 " COLOR
 if !has('nvim')
   set background=dark
-  colorscheme default
+  colorscheme dracula
   hi clear SignColumn
 endif
 
