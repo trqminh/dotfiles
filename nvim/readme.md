@@ -1,22 +1,34 @@
 ## Nvim installation
 - nvim + coc (root command required)
 ### 1. Steps
-```
-cd nvim/
-sh nvim_install.sh
+- install nvim + nvm + config file
+```bash
+sh nvim/nvim_install.sh
 source ~/.bashrc
-nvm install v14
+```
+- install nodejs
+```bash
+nvm install v16
+```
+- install nvim plugins
+```bash
+nvim
 :PlugInstall
-:CocInstall coc-json coc-python coc-snippets coc-vimlsp
 ```
 ### 2. Coc python settings
 Note that coc.nvim when updated requires higher nodejs versions. Use `nvm install version` to install a new version 
 if needed, `nvm list` to list all installed versions of nodejs and use `nvm alias default version` to specify the 
 default version.
+
+- install nvim coc dependencies
+```bash
+:CocInstall coc-json coc-python coc-snippets coc-vimlsp
 ```
+- specify python interpreter
+```bash
 conda activate ENV_NAME
 conda install jedi
-vi
+nvim
 :CocConfig
 ```
 then add or modify the python path:
