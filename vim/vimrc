@@ -25,10 +25,20 @@ endif
 "vim theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-" nerdtree
-Plug 'preservim/nerdtree'
-Plug 'baopham/vim-nerdtree-unfocus'
-Plug 'ryanoasis/vim-devicons'
+" Tree
+if has("nvim")
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-tree/nvim-web-devicons'
+  Plug 'MunifTanjim/nui.nvim'
+  Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
+endif
+
+if !has("nvim")
+  Plug 'preservim/nerdtree'
+  Plug 'baopham/vim-nerdtree-unfocus'
+  Plug 'ryanoasis/vim-devicons'
+endif
+  
 
 call plug#end()
 "----------------------------------------------------------
@@ -96,18 +106,24 @@ let g:gitgutter_sign_modified = '┋'
 
 
 
-" NERDTREE CONFIG
-" nerd tree toggle
-noremap <Leader>n :NERDTreeToggle<CR>
+" TREE CONFIG
+if !has('nvim')
+  noremap <Leader>n :NERDTreeToggle<CR>
+  " Start NERDTree and put the cursor back in the other window.
+  " autocmd VimEnter * NERDTree | wincmd p
 
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+  " Open the existing NERDTree on each new tab.
+  " autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
-" Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+  " close nerdtree when close tab
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" close nerdtree when close tab
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+  " nerdtree to the right
+  let g:NERDTreeWinPos = "right"
+endif
 
-" nerdtree to the right
-let g:NERDTreeWinPos = "right"
+if has('nvim')
+  nnoremap <Leader>n :Neotree float reveal<CR>
+  nnoremap <Leader>g :Neotree float git_status<CR>
+endif
+
