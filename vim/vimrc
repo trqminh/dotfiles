@@ -123,7 +123,7 @@ if !has('nvim')
 endif
 
 if has('nvim')
-  nnoremap <Leader>n :Neotree float reveal<CR>
+  nnoremap <C-b> :Neotree float reveal<CR>
   nnoremap <Leader>g :Neotree float git_status<CR>
 endif
 
