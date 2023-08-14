@@ -16,7 +16,7 @@ if has('nvim')
   " code completetion
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " theme
-  Plug 'bluz71/vim-nightfly-colors'
+  Plug 'bluz71/vim-nightfly-colors', {'branch': 'legacy'}
   Plug 'NLKNguyen/papercolor-theme'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'Tsuzat/NeoSolarized.nvim', { 'branch': 'master' }
@@ -79,7 +79,7 @@ endif
 if has('nvim')
   set termguicolors
   set background=dark
-  colorscheme NeoSolarized
+  colorscheme dracula
 endif
 
 
