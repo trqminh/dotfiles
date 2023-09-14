@@ -79,7 +79,7 @@ endif
 if has('nvim')
   set termguicolors
   set background=dark
-  colorscheme dracula
+  colorscheme tokyonight-storm
 endif
 
 
