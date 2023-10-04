@@ -198,7 +198,7 @@ assign [class="Pavucontrol"] $ws0
 assign [class="Lxappearance"] $ws0
 assign [class="Skype"] $ws0
 assign [class="Thunar"] $ws0
-assign [class="Chrome"] $ws1
+assign [class="Google-chrome"] $ws1
 
 # assign [class="Slack"] $ws5
 # assign [class="Foxit Reader"] $ws3
