@@ -94,21 +94,16 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $ws1 "1"
-
-set $ws2 "2: "
-set $ws3 "3: "
-
-set $ws4 "4"
-
-set $ws5 "5: "
-set $ws6 "6: "
-
-set $ws7 "7"
-
-set $ws8 "8: "
-set $ws9 "9: "
-set $ws0 "0: "
+set $ws0 "0:  "
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
+set $ws9 "9:"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -198,23 +193,29 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 # assigns
-assign [class="kitty"] $ws8
+assign [class="kitty"] $ws2
 assign [class="Pavucontrol"] $ws0
 assign [class="Lxappearance"] $ws0
-assign [class="Slack"] $ws5
-assign [class="Skype"] $ws5
-assign [class="Foxit Reader"] $ws3
-assign [class="Thunar"] $ws9
+assign [class="Skype"] $ws0
+assign [class="Thunar"] $ws0
+assign [class="Chrome"] $ws1
+
+# assign [class="Slack"] $ws5
+# assign [class="Foxit Reader"] $ws3
 
 #exec_always
-exec_always feh --bg-scale ~/Pictures/my_background.jpg
-exec_always pavucontrol
+exec_always feh --bg-scale ~/.config/i3/wallpaper.png
 exec_always dropbox start
+#exec_always skype
+#exec_always thunar
+#exec_always pavucontrol
 
 
 # Idk
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 10
 new_window 1pixel
+gaps inner 6
+gaps outer 5
 for_window [class=".*"] border pixel 3
 focus_follows_mouse no
 
