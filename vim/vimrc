@@ -20,6 +20,8 @@ if has('nvim')
   Plug 'NLKNguyen/papercolor-theme'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'Tsuzat/NeoSolarized.nvim', { 'branch': 'master' }
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
 endif
 
 "vim theme
