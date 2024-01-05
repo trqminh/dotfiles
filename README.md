@@ -25,6 +25,7 @@ bash install.sh
 ```
 
 - screenshots:
+
 PaperColor (nvim tree)      |  Solarized (nerd tree)
 :-------------------------:|:-------------------------:
 ![](screenshots/paper_color.png)  |  ![](screenshots/solarized.png)
