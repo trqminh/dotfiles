@@ -24,7 +24,7 @@ see [fonts readme](fonts/readme.md) for details
 bash install.sh
 ```
 
-- screenshots:
+- some screenshots:
 
 PaperColor (nvim tree)      |  Solarized (nerd tree)
 :-------------------------:|:-------------------------:
