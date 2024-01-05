@@ -2,7 +2,12 @@
 - tmux:
 ```
 bash tmux/tmux_install.sh tmux
+or
 bash tmux/tmux_install.sh solarized_tmux
+or
+bash tmux/tmux_install.sh dracula_tmux
+or
+bash tmux/tmux_install.sh tokyonight_tmux
 ```
 - vim:
 ```
@@ -20,4 +25,7 @@ bash install.sh
 ```
 
 - screenshots:
-![alt text](screenshot.png "nvim with tmux on kitty terminal, coc for python interpreter, git gutter, nerd tree, solarized theme")
+PaperColor (nvim tree)      |  Solarized (nerd tree)
+:-------------------------:|:-------------------------:
+![](screenshots/paper_color.png)  |  ![](screenshots/solarized.png)
+
