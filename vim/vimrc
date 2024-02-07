@@ -20,12 +20,14 @@ if has('nvim')
   Plug 'NLKNguyen/papercolor-theme'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'Tsuzat/NeoSolarized.nvim', { 'branch': 'master' }
+
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
 endif
 
 "vim theme
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'tpope/vim-vividchalk'
 
 " Tree
 if has("nvim")
@@ -64,7 +66,12 @@ set nofixendofline
 set lazyredraw
 "set updatetime=100
 highlight Comment ctermfg=green
+
+" MOUSE AND CURSOR
 set mouse=a
+if has('nvim')
+  set guicursor=n-v-c-i:block
+endif
 if !has('nvim')
   set ttymouse=xterm2
 endif
@@ -73,15 +80,14 @@ endif
 " COLOR
 if !has('nvim')
   set background=dark
-  colorscheme dracula
-  hi clear SignColumn
+  colorscheme vividchalk
 endif
 
 
 if has('nvim')
   set termguicolors
   set background=dark
-  colorscheme PaperColor
+  colorscheme vividchalk
 endif
 
 
@@ -106,6 +112,17 @@ inoremap <Tab> <C-R>=CleverTab()<CR>
 let g:gitgutter_sign_added    = '┃'
 let g:gitgutter_sign_modified = '┋'
 
+if g:colors_name == 'vividchalk'
+  highlight clear SignColumn
+  highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=0
+  highlight GitGutterChange guifg=#bbbb00 ctermfg=3 ctermbg=0
+  highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=0
+endif
+
+" GIT BLAME
+set ls=0 " no last status line in nvim
+set cmdheight=2 " better view git blame
+autocmd CursorMoved * :call gitblame#echo()
 
 
 " TREE CONFIG
