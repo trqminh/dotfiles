@@ -87,7 +87,7 @@ endif
 if has('nvim')
   set termguicolors
   set background=dark
-  colorscheme vividchalk
+  colorscheme nightfly
 endif
 
 
