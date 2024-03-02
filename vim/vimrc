@@ -23,6 +23,7 @@ if has('nvim')
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
+  Plug 'github/copilot.vim'
 endif
 
 "vim theme
