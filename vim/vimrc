@@ -23,12 +23,12 @@ if has('nvim')
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
-  Plug 'github/copilot.vim'
 endif
 
 "vim theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-vividchalk'
+Plug 'tomasiser/vim-code-dark'
 
 " Tree
 if has("nvim")
@@ -88,7 +88,7 @@ endif
 if has('nvim')
   set termguicolors
   set background=dark
-  colorscheme NeoSolarized
+  colorscheme codedark
 endif
 
 
