@@ -1,4 +1,4 @@
-bash tmux/tmux_install.sh tmux
+bash tmux/tmux_install.sh nightfly_tmux
 bash vim/vim_install.sh
 bash kitty/kitty_install.sh
 bash nvim/nvim_install.sh
