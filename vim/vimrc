@@ -29,6 +29,8 @@ endif
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-vividchalk'
 Plug 'tomasiser/vim-code-dark'
+Plug 'craftzdog/solarized-osaka.nvim'
+Plug 'maxmx03/solarized.nvim'
 
 " Tree
 if has("nvim")
@@ -88,7 +90,7 @@ endif
 if has('nvim')
   set termguicolors
   set background=dark
-  colorscheme tokyonight
+  colorscheme solarized-osaka
 endif
 
 
