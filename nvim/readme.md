@@ -1,5 +1,5 @@
 ## Nvim installation
-- nvim + coc (root command required)
+- nvim + coc
 ### 1. Steps
 - install nvim + nvm + config file
 ```bash

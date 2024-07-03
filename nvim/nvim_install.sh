@@ -1,13 +1,11 @@
-NVIM_FOLD=~/.config/nvim/
+NVIM_FOLD=~/nvim-linux64/bin/
 if [ -d "$NVIM_FOLD" ]; then
     echo "[nvim]: OK"
 else 
     echo "INSTALL nvim"
-    sudo add-apt-repository ppa:neovim-ppa/stable
-    sudo apt-get update
-    sudo apt-get install neovim
-    mkdir ~/.config/nvim/
-    echo "alias vi='nvim'" >> ~/.bashrc
+    wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz ~/
+    tar xzvf ~/nvim-linux64.tar.gz
+    echo "alias nvim='~/nvim-linux64/bin/nvim'" >> ~/.bashrc
 fi
 
 FILE=~/.local/share/nvim/site/autoload/plug.vim

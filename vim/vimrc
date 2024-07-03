@@ -23,14 +23,13 @@ if has('nvim')
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
+  Plug 'craftzdog/solarized-osaka.nvim'
 endif
 
 "vim theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-vividchalk'
 Plug 'tomasiser/vim-code-dark'
-Plug 'craftzdog/solarized-osaka.nvim'
-Plug 'maxmx03/solarized.nvim'
 
 " Tree
 if has("nvim")
