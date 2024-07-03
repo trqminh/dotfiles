@@ -3,9 +3,11 @@ if [ -d "$NVIM_FOLD" ]; then
     echo "[nvim]: OK"
 else 
     echo "INSTALL nvim"
-    wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz ~/
+    cd ~
+    wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz 
     tar xzvf ~/nvim-linux64.tar.gz
     echo "alias nvim='~/nvim-linux64/bin/nvim'" >> ~/.bashrc
+    cd -
 fi
 
 FILE=~/.local/share/nvim/site/autoload/plug.vim
@@ -32,3 +34,4 @@ else
 fi
 
 cp vim/vimrc ~/.config/nvim/init.vim
+source ~/.bashrc
