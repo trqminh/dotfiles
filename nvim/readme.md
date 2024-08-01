@@ -34,7 +34,14 @@ nvim
 then add or modify the python path:
 ```
 {
-    "python.pythonPath": "/home/tqminh/anaconda3/envs/ENV_NAME/bin/python"
+    "python.pythonPath": "/home/tqminh/anaconda3/envs/ENV_NAME/bin/python",
+    "snippets.ultisnips.pythonPrompt": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "/home/tqminh/anaconda3/envs/ENV_NAME/bin/pylint",
+    "python.linting.pylintArgs": [
+        "--errors-only",
+        "--generated-members=numpy.* ,torch.* ,cv2.* , cv.*"
+    ]
 }
 ```
 
