@@ -10,7 +10,7 @@ Plug '~/.fzf'
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'zivyangll/git-blame.vim'
+" Plug 'zivyangll/git-blame.vim'
 
 if has('nvim')
   " code completetion
@@ -123,8 +123,8 @@ endif
 
 " GIT BLAME
 set ls=0 " no last status line in nvim
-set cmdheight=2 " better view git blame
-autocmd CursorMoved * :call gitblame#echo()
+" set cmdheight=2 " better view git blame
+" autocmd CursorMoved * :call gitblame#echo()
 
 
 " TREE CONFIG
