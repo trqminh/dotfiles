@@ -88,8 +88,8 @@ endif
 
 if has('nvim')
   set termguicolors
-  set background=light
-  colorscheme PaperColor
+  set background=dark
+  colorscheme solarized-osaka-night
 endif
 
 
