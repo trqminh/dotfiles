@@ -1,32 +1,12 @@
 # dotfiles
-- tmux:
-```
-bash tmux/tmux_install.sh tmux
-or
-bash tmux/tmux_install.sh solarized_tmux
-or
-bash tmux/tmux_install.sh dracula_tmux
-or
-bash tmux/tmux_install.sh tokyonight_tmux
-```
-- vim:
-```
-bash vim/vim_install.sh
-```
-- nvim:   
-see [nvim readme](nvim/readme.md) for details
+1. tmux: make sure to install latest tmux version, >= 3.3 seems to be the best. Run `sh tmux/update_tmux.sh` to install latest tmux version. Run `sh tmux/tmux_install.sh solarized_tmux` to install configs.
 
-- fonts:
-see [fonts readme](fonts/readme.md) for details
+2. nvim: see [nvim readme](nvim/readme.md) for details
 
-- all at once, but still need to see [nvim readme](nvim/readme.md) for details:
-```
-bash install.sh
-```
+3. fonts: see [fonts readme](fonts/readme.md) for details
 
-- some screenshots:
+4. yazi: Run `sh yazi/yazi_install.sh` to install yazi
 
-PaperColor (nvim tree)      |  Solarized (nerd tree)
-:-------------------------:|:-------------------------:
-![](screenshots/paper_color.png)  |  ![](screenshots/solarized.png)
+5. Window manager: [i3](i3/README.md) for linux or [yabai](yabai/README.md) for mac.
 
+6. kitty: [kitty](kitty/kitty_install.sh) terminal emulator

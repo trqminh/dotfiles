@@ -12,40 +12,28 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " Plug 'zivyangll/git-blame.vim'
 
-if has('nvim')
-  " code completetion
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  " theme
-  Plug 'bluz71/vim-nightfly-colors', {'branch': 'legacy'}
-  Plug 'NLKNguyen/papercolor-theme'
-  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-  Plug 'Tsuzat/NeoSolarized.nvim', { 'branch': 'master' }
+" code completetion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
-  Plug 'craftzdog/solarized-osaka.nvim'
-endif
-
-"vim theme
+" theme
+Plug 'bluz71/vim-nightfly-colors', {'branch': 'legacy'}
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'Tsuzat/NeoSolarized.nvim', { 'branch': 'master' }
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-vividchalk'
 Plug 'tomasiser/vim-code-dark'
 
-" Tree
-if has("nvim")
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-tree/nvim-web-devicons'
-  Plug 'MunifTanjim/nui.nvim'
-  Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
-  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
-endif
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
+Plug 'craftzdog/solarized-osaka.nvim'
 
-if !has("nvim")
-  Plug 'preservim/nerdtree'
-  Plug 'baopham/vim-nerdtree-unfocus'
-  Plug 'ryanoasis/vim-devicons'
-endif
-  
+" Tree
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 
 call plug#end()
 "----------------------------------------------------------
@@ -72,26 +60,13 @@ highlight Comment ctermfg=green
 
 " MOUSE AND CURSOR
 set mouse=a
-if has('nvim')
-  set guicursor=n-v-c-i:block
-endif
-if !has('nvim')
-  set ttymouse=xterm2
-endif
+set guicursor=n-v-c-i:block
 
 
 " COLOR
-if !has('nvim')
-  set background=dark
-  colorscheme vividchalk
-endif
-
-
-if has('nvim')
-  set termguicolors
-  set background=dark
-  colorscheme solarized-osaka-night
-endif
+set termguicolors
+set background=dark
+colorscheme solarized-osaka-night
 
 
 " KEY MAP
@@ -132,27 +107,10 @@ set ls=0 " no last status line in nvim
 
 
 " TREE CONFIG
-if !has('nvim')
-  noremap <Leader>n :NERDTreeToggle<CR>
-  " Start NERDTree and put the cursor back in the other window.
-  " autocmd VimEnter * NERDTree | wincmd p
+nnoremap <C-b> :Neotree float reveal<CR>
+nnoremap <Leader>g :Neotree float git_status<CR>
 
-  " Open the existing NERDTree on each new tab.
-  " autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
-
-  " close nerdtree when close tab
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-  " nerdtree to the right
-  let g:NERDTreeWinPos = "right"
-endif
-
-if has('nvim')
-  nnoremap <C-b> :Neotree float reveal<CR>
-  nnoremap <Leader>g :Neotree float git_status<CR>
-endif
-
-
+" TELESCOPE
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
