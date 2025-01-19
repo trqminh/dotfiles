@@ -33,5 +33,5 @@ else
     echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc
 fi
 
-cp vim/vimrc ~/.config/nvim/init.vim
+cp nvim/init.vim ~/.config/nvim/init.vim
 source ~/.bashrc
