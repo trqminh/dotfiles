@@ -1,6 +1,7 @@
-if [ -d ~/tmux/ ]; then
+file=~/tmux/tmux
+if [ -f "$file" ]; then
     echo "tmux already installed"
-    exit 0
+    exit 1
 fi
 
 git clone https://github.com/tmux/tmux.git ~/tmux/
@@ -11,4 +12,7 @@ bash autogen.sh
 make && sudo make install
 cd -
 
-echo "alias tmux='~/tmux/tmux'" >> ~/.bashrc
+if [ -f "$file" ]; then
+    echo "tmux is successfully installed"
+    echo "alias tmux='~/tmux/tmux'" >> ~/.bashrc
+fi
