@@ -4,10 +4,12 @@ if [ -f "$file" ]; then
   exit 1
 fi
 
+# rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup update
+. $HOME/.cargo/env
 
-source ~/.bashrc
+# yazi
 git clone https://github.com/sxyazi/yazi.git ~/yazi
 cd ~/yazi
 cargo build --release --locked
