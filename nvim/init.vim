@@ -66,7 +66,7 @@ set guicursor=n-v-c-i:block
 " COLOR
 set termguicolors
 set background=dark
-colorscheme solarized-osaka-night
+colorscheme solarized-osaka
 
 
 " KEY MAP
