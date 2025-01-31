@@ -27,15 +27,18 @@ Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
 Plug 'craftzdog/solarized-osaka.nvim'
 
 " Tree
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-tree/nvim-web-devicons'
-Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-lua/plenary.nvim' "ntree prerequisite
+Plug 'nvim-tree/nvim-web-devicons' "ntree prerequisite
+Plug 'MunifTanjim/nui.nvim' "ntree prerequisite
 Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
 
 " Search
 Plug '~/.fzf'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
+
+" Oil
+Plug 'stevearc/oil.nvim'
 
 call plug#end()
 "----------------------------------------------------------
@@ -69,23 +72,11 @@ set termguicolors
 set background=dark
 colorscheme solarized-osaka
 
-" KEY MAP
+" GENERAL KEY MAP
 lua << EOF
 vim.g.mapleader = ' '
 EOF
-nnoremap <C-p> :FZF<CR>
-nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 inoremap jk <ESC>
-
-" CLEVER TAB
-function! CleverTab()
-  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-    return "\<Tab>"
-  else
-    return "\<C-N>"
-  endif
-endfunction
-inoremap <Tab> <C-R>=CleverTab()<CR>
 
 " GITGUTTER SIGNS
 let g:gitgutter_sign_added    = '┃'
@@ -94,16 +85,28 @@ let g:gitgutter_sign_modified = '┋'
 " GIT BLAME
 " set cmdheight=2 " better view git blame
 " autocmd CursorMoved * :call gitblame#echo()
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 " TREE CONFIG
 nnoremap <C-b> :Neotree float reveal<CR>
 nnoremap <Leader>g :Neotree float git_status<CR>
 
-" TELESCOPE
+" SEARCH 
+nnoremap <C-p> :FZF<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" OIL
+lua << EOF
+require("oil").setup({
+    view_options = {
+      show_hidden = true,
+    },
+})
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+EOF
 
 " HARPOON
 lua << EOF
@@ -117,7 +120,7 @@ vim.keymap.set("n", "<C-t>", function() harpoon:list():select(2) end)
 vim.keymap.set("n", "<C-n>", function() harpoon:list():select(3) end)
 vim.keymap.set("n", "<C-s>", function() harpoon:list():select(4) end)
 
--- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<C-S-N>", function() harpoon:list():next() end)
 EOF
+
