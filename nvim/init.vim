@@ -4,13 +4,11 @@ filetype off                  " required
 
 " --------------------------------
 call plug#begin()
-" search
-Plug '~/.fzf'
 
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-" Plug 'zivyangll/git-blame.vim'
+Plug 'zivyangll/git-blame.vim'
 
 " code completetion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -33,7 +31,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
+
+" Search
+Plug '~/.fzf'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 
 call plug#end()
 "----------------------------------------------------------
@@ -50,13 +52,11 @@ set hlsearch
 set ruler
 set autoindent
 set cursorline
-
+set ls=0 " no last status line in nvim
 set noswapfile
 set nobackup
-set nofixendofline
 set lazyredraw
 "set updatetime=100
-highlight Comment ctermfg=green
 
 " MOUSE AND CURSOR
 set mouse=a
@@ -64,10 +64,10 @@ set guicursor=n-v-c-i:block
 
 
 " COLOR
+highlight Comment ctermfg=green
 set termguicolors
 set background=dark
 colorscheme solarized-osaka
-
 
 " KEY MAP
 lua << EOF
@@ -76,7 +76,6 @@ EOF
 nnoremap <C-p> :FZF<CR>
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 inoremap jk <ESC>
-
 
 " CLEVER TAB
 function! CleverTab()
@@ -88,23 +87,13 @@ function! CleverTab()
 endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
-
 " GITGUTTER SIGNS
 let g:gitgutter_sign_added    = '┃'
 let g:gitgutter_sign_modified = '┋'
 
-if g:colors_name == 'vividchalk'
-  highlight clear SignColumn
-  highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=0
-  highlight GitGutterChange guifg=#bbbb00 ctermfg=3 ctermbg=0
-  highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=0
-endif
-
 " GIT BLAME
-set ls=0 " no last status line in nvim
 " set cmdheight=2 " better view git blame
 " autocmd CursorMoved * :call gitblame#echo()
-
 
 " TREE CONFIG
 nnoremap <C-b> :Neotree float reveal<CR>
@@ -116,3 +105,19 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" HARPOON
+lua << EOF
+local harpoon = require("harpoon")
+harpoon:setup()
+vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
+vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
+vim.keymap.set("n", "<C-h>", function() harpoon:list():select(1) end)
+vim.keymap.set("n", "<C-t>", function() harpoon:list():select(2) end)
+vim.keymap.set("n", "<C-n>", function() harpoon:list():select(3) end)
+vim.keymap.set("n", "<C-s>", function() harpoon:list():select(4) end)
+
+-- Toggle previous & next buffers stored within Harpoon list
+vim.keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end)
+vim.keymap.set("n", "<C-S-N>", function() harpoon:list():next() end)
+EOF
