@@ -88,11 +88,12 @@ let g:gitgutter_sign_modified = '┋'
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 " TREE CONFIG
-nnoremap <C-b> :Neotree float reveal<CR>
+nnoremap - :Neotree float reveal<CR>
 nnoremap <Leader>g :Neotree float git_status<CR>
 
 " SEARCH 
-nnoremap <C-p> :FZF<CR>
+" nnoremap <C-p> :FZF<CR>
+nnoremap <C-p> <cmd>Telescope git_files<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -105,7 +106,7 @@ require("oil").setup({
       show_hidden = true,
     },
 })
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<C-b>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 EOF
 
 " HARPOON
