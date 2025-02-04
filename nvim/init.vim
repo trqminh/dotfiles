@@ -21,6 +21,7 @@ Plug 'Tsuzat/NeoSolarized.nvim', { 'branch': 'master' }
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-vividchalk'
 Plug 'tomasiser/vim-code-dark'
+Plug 'tanvirtin/monokai.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
@@ -70,7 +71,7 @@ set guicursor=n-v-c-i:block
 highlight Comment ctermfg=green
 set termguicolors
 set background=dark
-colorscheme solarized-osaka
+colorscheme monokai_soda
 
 " GENERAL KEY MAP
 lua << EOF
