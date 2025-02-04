@@ -71,7 +71,7 @@ set guicursor=n-v-c-i:block
 highlight Comment ctermfg=green
 set termguicolors
 set background=dark
-colorscheme monokai_soda
+colorscheme monokai_pro
 
 " GENERAL KEY MAP
 lua << EOF
