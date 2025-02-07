@@ -60,6 +60,7 @@ set ls=0 " no last status line in nvim
 set noswapfile
 set nobackup
 set lazyredraw
+set showtabline=2
 "set updatetime=100
 
 " MOUSE AND CURSOR

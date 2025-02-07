@@ -1,12 +1,12 @@
-NVIM_FOLD=~/nvim-linux64/bin/
+NVIM_FOLD=~/nvim-linux-x86_64/bin/
 if [ -d "$NVIM_FOLD" ]; then
     echo "[nvim]: OK"
 else 
     echo "INSTALL nvim"
     cd ~
-    wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz 
-    tar xzvf ~/nvim-linux64.tar.gz
-    echo "alias nvim='~/nvim-linux64/bin/nvim'" >> ~/.bashrc
+    wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz 
+    tar xzvf ~/nvim-linux-x86_64.tar.gz
+    echo "alias nvim='~/nvim-linux-x86_64/bin/nvim'" >> ~/.bashrc
     cd -
 fi
 
@@ -33,5 +33,5 @@ else
     echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc
 fi
 
+mkdir -p ~/.config/nvim/
 cp nvim/init.vim ~/.config/nvim/init.vim
-source ~/.bashrc

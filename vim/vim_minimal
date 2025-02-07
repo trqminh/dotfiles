@@ -33,6 +33,7 @@ set noswapfile
 set nobackup
 set nofixendofline
 set lazyredraw
+set showtabline=2
 "set updatetime=100
 highlight Comment ctermfg=green
 
