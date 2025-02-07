@@ -72,7 +72,7 @@ set guicursor=n-v-c-i:block
 highlight Comment ctermfg=green
 set termguicolors
 set background=dark
-colorscheme monokai_pro
+colorscheme solarized-osaka
 
 " GENERAL KEY MAP
 lua << EOF
