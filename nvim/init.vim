@@ -50,17 +50,17 @@ syntax on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set ai
 set number
 set hlsearch
 set ruler
 set autoindent
-set cursorline
 set ls=0 " no last status line in nvim
 set noswapfile
 set nobackup
+set nofixendofline
 set lazyredraw
 set showtabline=2
+"set cursorline
 "set updatetime=100
 
 " MOUSE AND CURSOR
