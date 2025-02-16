@@ -1,4 +1,3 @@
-bash tmux/update_tmux.sh
 bash tmux/tmux_install.sh solarized_tmux
 bash vim/vim_install.sh
 bash kitty/kitty_install.sh

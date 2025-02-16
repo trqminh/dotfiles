@@ -18,4 +18,4 @@ else
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 fi
 
-cp vim/vim_minimal ~/.vimrc
+cp vim/vimrc ~/.vimrc

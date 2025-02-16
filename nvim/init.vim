@@ -14,32 +14,23 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " theme
-Plug 'bluz71/vim-nightfly-colors', {'branch': 'legacy'}
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'Tsuzat/NeoSolarized.nvim', { 'branch': 'master' }
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-vividchalk'
-Plug 'tomasiser/vim-code-dark'
-Plug 'tanvirtin/monokai.nvim'
-
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
 Plug 'craftzdog/solarized-osaka.nvim'
 
-" Tree
+" indent
+Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
+
+" explorer
 Plug 'nvim-lua/plenary.nvim' "ntree prerequisite
 Plug 'nvim-tree/nvim-web-devicons' "ntree prerequisite
 Plug 'MunifTanjim/nui.nvim' "ntree prerequisite
 Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
+Plug 'stevearc/oil.nvim'
 
-" Search
+" search
 Plug '~/.fzf'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
-
-" Oil
-Plug 'stevearc/oil.nvim'
 
 call plug#end()
 "----------------------------------------------------------
@@ -54,12 +45,12 @@ set number
 set hlsearch
 set ruler
 set autoindent
-set ls=0 " no last status line in nvim
 set noswapfile
 set nobackup
 set nofixendofline
 set lazyredraw
 set showtabline=2
+set ls=0 " no last status line in nvim
 "set cursorline
 "set updatetime=100
 
