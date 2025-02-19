@@ -14,8 +14,8 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " theme
-Plug 'tpope/vim-vividchalk'
 Plug 'craftzdog/solarized-osaka.nvim'
+Plug 'yobibyte/helix-nvim'
 
 " indent
 Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
@@ -35,6 +35,7 @@ Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 call plug#end()
 "----------------------------------------------------------
 "----------------------------------------------------------
+
 
 " OPTIONS
 syntax on
@@ -91,6 +92,9 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" COC-DEFINITION
+nmap <silent> gd <Plug>(coc-definition)
 
 " OIL
 lua << EOF
