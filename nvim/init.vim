@@ -56,7 +56,6 @@ set ls=0 " no last status line in nvim
 "set updatetime=100
 
 " MOUSE AND CURSOR
-set mouse=a
 set guicursor=n-v-c-i:block
 
 
