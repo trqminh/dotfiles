@@ -51,9 +51,9 @@ set nobackup
 set nofixendofline
 set lazyredraw
 set showtabline=2
+set cursorline
+set relativenumber
 set ls=0 " no last status line in nvim
-"set cursorline
-"set updatetime=100
 
 " MOUSE AND CURSOR
 set mouse=
@@ -65,6 +65,7 @@ highlight Comment ctermfg=green
 set termguicolors
 set background=dark
 colorscheme solarized-osaka
+hi clear CursorLine
 
 " GENERAL KEY MAP
 lua << EOF

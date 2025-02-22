@@ -28,18 +28,18 @@ set nobackup
 set nofixendofline
 set lazyredraw
 set showtabline=2
-"set cursorline
-"set updatetime=100
-highlight Comment ctermfg=green
+set cursorline
 
 " MOUSE AND CURSOR
-set mouse=a
+set mouse=
 set ttymouse=xterm2
 
 
 " COLOR
+highlight Comment ctermfg=green
 set background=dark
 colorscheme default
+hi clear CursorLine
 
 
 " KEY MAP
