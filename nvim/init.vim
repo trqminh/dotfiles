@@ -17,9 +17,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'craftzdog/solarized-osaka.nvim'
 Plug 'yobibyte/helix-nvim'
 
-" indent
-Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'v2.20.6' }
-
 " explorer
 Plug 'nvim-lua/plenary.nvim' "ntree prerequisite
 Plug 'nvim-tree/nvim-web-devicons' "ntree prerequisite
