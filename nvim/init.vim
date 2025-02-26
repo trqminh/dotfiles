@@ -101,7 +101,7 @@ require("oil").setup({
       show_hidden = true,
     },
 })
-vim.keymap.set("n", "<C-b>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<C-b>", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 EOF
 
 " HARPOON
