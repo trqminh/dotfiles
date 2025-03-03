@@ -9,13 +9,15 @@ fi
 
 
 FILE=~/.vim/autoload/plug.vim
+PLUG_FOLDER=~/.vim/autoload/
 if [ -f "$FILE" ]; then
     echo "[vimplug for nvim]: OK"
 else 
     echo "INSTALL VIMPLUG for nvim..."
-    mkdir -p ~/.vim/
-    sh -c 'curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    mkdir -p $PLUG_FOLDER
+    #sh -c 'curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    #   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    wget -P $PLUG_FOLDER https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 cp vim/vimrc ~/.vimrc

@@ -11,20 +11,22 @@ else
 fi
 
 FILE=~/.local/share/nvim/site/autoload/plug.vim
+PLUG_FOLDER=~/.local/share/nvim/site/autoload/
 if [ -f "$FILE" ]; then
     echo "[vimplug for nvim]: OK"
 else 
     echo "INSTALL VIMPLUG for nvim..."
-    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    mkdir -p PLUG_FOLDER
+    wget -P $PLUG_FOLDER 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 fi
 
-echo "[nodejs install]"
+echo "[nodejs install..]"
 if [ -d "${HOME}/.nvm/.git" ]; then
     echo "[nvm]: installed"
 else
     cd ~
-    curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh -o install_nvm.sh
+    #curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh -o install_nvm.sh
+    wget -O install_nvm.sh https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh
     bash install_nvm.sh
     cd -
 
