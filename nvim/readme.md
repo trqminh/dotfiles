@@ -44,6 +44,21 @@ then add or modify the python path:
     ]
 }
 ```
+or using pyright:
+```
+:CocInstall coc-pyright
+```
+then, 
+```
+chmod +x ~/.config/nvim/pyright.py
+```
+and modify the python path:
+```
+{
+    "python.pythonPath": "~/.config/nvim/pyright.py",
+    ...
+}
+```
 
 ### 3. Copilot.nvim
 Install
