@@ -41,7 +41,8 @@ then add or modify the python path:
     "python.linting.pylintArgs": [
         "--errors-only",
         "--generated-members=numpy.* ,torch.* ,cv2.* , cv.*"
-    ]
+    ],
+    "diagnostic.checkCurrentLine": true
 }
 ```
 or using pyright:
@@ -56,7 +57,13 @@ and modify the python path:
 ```
 {
     "python.pythonPath": "~/.config/nvim/pyright.py",
-    ...
+    "snippets.ultisnips.pythonPrompt": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--errors-only",
+        "--generated-members=numpy.* ,torch.* ,cv2.* , cv.*"
+    ],
+    "diagnostic.checkCurrentLine": true
 }
 ```
 
