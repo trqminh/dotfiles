@@ -197,5 +197,5 @@ require("aerial").setup({
     -- Jump forwards/backwards with '{' and '}'
   end,
 })
-vim.keymap.set("n", "<leader>fv", "<cmd>AerialToggle!<CR>")
+vim.keymap.set("n", "<leader>fv", "<cmd>AerialToggle<CR>")
 EOF
