@@ -16,6 +16,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " theme
 Plug 'craftzdog/solarized-osaka.nvim'
 Plug 'yobibyte/helix-nvim'
+Plug 'EdenEast/nightfox.nvim'
 
 " explorer
 Plug 'nvim-lua/plenary.nvim' "ntree prerequisite
@@ -198,4 +199,15 @@ require("aerial").setup({
   end,
 })
 vim.keymap.set("n", "<leader>fv", "<cmd>AerialToggle<CR>")
+EOF
+
+" TREESITTER
+lua << EOF
+local ts = require'nvim-treesitter.configs'
+
+ts.setup {
+  highlight = {
+    enable = true, -- Enable Treesitter-based highlighting
+  },
+}
 EOF
