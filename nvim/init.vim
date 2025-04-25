@@ -11,7 +11,16 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'lewis6991/gitsigns.nvim'
 
 " code completetion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'williamboman/mason.nvim',              { 'do': ':MasonUpdate' }
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+
+Plug 'hrsh7th/nvim-cmp'                      " completion UI
+Plug 'hrsh7th/cmp-nvim-lsp'                  " LSP source
+Plug 'L3MON4D3/LuaSnip'                      " snippet engine
+Plug 'saadparwaiz1/cmp_luasnip'              " cmp ↔ LuaSnip
+
 
 " theme
 Plug 'craftzdog/solarized-osaka.nvim'
@@ -61,7 +70,7 @@ set relativenumber
 set ls=0 " no last status line in nvim
 
 " MOUSE AND CURSOR
-set mouse=
+set mouse=a
 set guicursor=n-v-c-i:block
 
 
@@ -75,6 +84,8 @@ hi clear CursorLine
 " GENERAL KEY MAP
 lua << EOF
 vim.g.mapleader = ' '
+vim.keymap.set("i", ";;", "<Esc>:w<CR>")
+vim.keymap.set("n", ";;", ":w<CR>")
 EOF
 inoremap jk <ESC>
 
@@ -217,3 +228,86 @@ ts.setup {
   },
 }
 EOF
+
+" ── 2. LSP + completion setup ────────────────────────────────────
+lua << EOF
+-- Mason ----------------------------------------------------------
+require('mason').setup()
+require('mason-lspconfig').setup {
+  ensure_installed = { 'pyright' }  -- add more servers as you need
+}
+
+-- nvim-cmp --------------------------------------------------------
+local cmp = require('cmp')
+cmp.setup {
+  snippet = {
+    expand = function(args) require('luasnip').lsp_expand(args.body) end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-y>']  = cmp.mapping.confirm({ select = true }),
+    ['<Tab>'] = cmp.mapping.select_next_item(),
+    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+  }),
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'buffer' },
+    { name = 'path' },
+  },
+}
+
+-- Helper that grabs *the first python in $PATH* (= your active env)
+local function python_path()
+  return vim.fn.exepath('python') or 'python'
+end
+-- reddit tip: use it for python.pythonPath :contentReference[oaicite:1]{index=1}
+
+-- LSP server setup -----------------------------------------------
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local lspconfig    = require('lspconfig')
+
+lspconfig.pyright.setup{
+  capabilities = capabilities,
+  on_new_config = function(new_cfg,_)
+    new_cfg.settings = new_cfg.settings or {}
+    new_cfg.settings.python = { pythonPath = python_path() }
+  end,
+  settings = {         -- keep Pyright fast
+    python = { analysis = { diagnosticMode = 'openFilesOnly' } },
+  },
+}
+
+-- Handy on-attach mappings (add more if you like)
+local map = vim.keymap.set
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(ev)
+    map('n', 'gd',  vim.lsp.buf.definition,   { buffer = ev.buf })
+    map('n', 'K',   vim.lsp.buf.hover,        { buffer = ev.buf })
+    map('n', 'gr',  vim.lsp.buf.references,   { buffer = ev.buf })
+    map('n', '<F2>',vim.lsp.buf.rename,       { buffer = ev.buf })
+  end
+})
+
+vim.diagnostic.config({
+  virtual_text = false,   -- Disable inline diagnostics
+  signs = true,          -- Disable gutter signs
+  underline = true,      -- Optional: disable underline
+  update_in_insert = true,
+  severity_sort = true,
+})
+
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float(nil, { focus = false, scope = "line" })
+  end
+})
+
+
+vim.fn.sign_define("DiagnosticSignError", {text = ">>", texthl = "DiagnosticSignError"})
+vim.fn.sign_define("DiagnosticSignWarn",  {text = ">>", texthl = "DiagnosticSignWarn"})
+vim.fn.sign_define("DiagnosticSignInfo",  {text = ">>", texthl = "DiagnosticSignInfo"})
+vim.fn.sign_define("DiagnosticSignHint",  {text = ">>", texthl = "DiagnosticSignHint"})
+
+vim.o.updatetime = 500
+
+EOF
+

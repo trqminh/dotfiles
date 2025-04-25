@@ -37,4 +37,3 @@ fi
 
 mkdir -p ~/.config/nvim/
 cp nvim/init.vim ~/.config/nvim/init.vim
-cp nvim/pyright.py ~/.config/nvim/pyright.py

@@ -1,0 +1,11 @@
+{
+  "exclude": [
+    "**/__pycache__",
+    "all_data/",
+    ".git",
+    ".venv",
+    "**/*.jpg",
+    "**/*.png"
+  ]
+}
+

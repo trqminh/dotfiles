@@ -8,14 +8,31 @@ source ~/.bashrc
 ```
 - install nodejs
 ```bash
-nvm install v16
+nvm install v20
 ```
 - install nvim plugins
 ```bash
 nvim
 :PlugInstall
 ```
-### 2. Coc python settings
+
+### 2. nvim-lspconfig
+
+pyrightconfig.json
+```
+{
+  "exclude": [
+    "all_data/",
+    "**/__pycache__",
+    ".git",
+    ".venv",
+    "**/*.jpg",
+    "**/*.png"
+  ]
+}
+```
+
+### 3. Coc python settings (deprecated)
 Note that coc.nvim when updated requires higher nodejs versions. Use `nvm install version` to install a new version 
 if needed, `nvm list` to list all installed versions of nodejs and use `nvm alias default version` to specify the 
 default version.
