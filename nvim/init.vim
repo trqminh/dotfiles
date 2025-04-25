@@ -104,9 +104,6 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" COC-DEFINITION
-nmap <silent> gd <Plug>(coc-definition)
-
 " OIL
 lua << EOF
 require("oil").setup({
