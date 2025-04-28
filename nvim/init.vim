@@ -221,7 +221,7 @@ local ts = require'nvim-treesitter.configs'
 ts.setup {
   ensure_installed = {'cpp', 'python', 'bash'},
   highlight = {
-    enable = false, -- Enable Treesitter-based highlighting
+    enable = true, -- Enable Treesitter-based highlighting
   },
 }
 EOF
