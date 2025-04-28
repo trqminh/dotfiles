@@ -53,13 +53,13 @@ call plug#end()
 
 " OPTIONS
 syntax on
-set tabstop=4
-set shiftwidth=4
-set expandtab
+autocmd FileType * setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+set autoindent
+set smarttab
+
 set number
 set hlsearch
 set ruler
-set autoindent
 set noswapfile
 set nobackup
 set nofixendofline
@@ -221,20 +221,20 @@ local ts = require'nvim-treesitter.configs'
 ts.setup {
   ensure_installed = {'cpp', 'python', 'bash'},
   highlight = {
-    enable = true, -- Enable Treesitter-based highlighting
+    enable = false, -- Enable Treesitter-based highlighting
   },
 }
 EOF
 
-" ── 2. LSP + completion setup ────────────────────────────────────
+" LSP + COMPLETION SETUP
 lua << EOF
--- Mason ----------------------------------------------------------
+-- Mason
 require('mason').setup()
 require('mason-lspconfig').setup {
-  ensure_installed = { 'pyright' }  -- add more servers as you need
+  ensure_installed = { 'pyright' }
 }
 
--- nvim-cmp --------------------------------------------------------
+-- nvim-cmp
 local cmp = require('cmp')
 cmp.setup {
   snippet = {
@@ -252,13 +252,13 @@ cmp.setup {
   },
 }
 
--- Helper that grabs *the first python in $PATH* (= your active env)
+-- Helper that grabs *the first python in $PATH* (= active env)
 local function python_path()
   return vim.fn.exepath('python') or 'python'
 end
 -- reddit tip: use it for python.pythonPath :contentReference[oaicite:1]{index=1}
 
--- LSP server setup -----------------------------------------------
+-- LSP server setup
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig    = require('lspconfig')
 
@@ -308,3 +308,7 @@ vim.o.updatetime = 500
 
 EOF
 
+" INDENT BLANKLINE
+lua << EOF
+require("ibl").setup()
+EOF
