@@ -286,7 +286,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 vim.diagnostic.config({
   virtual_text = false,   -- Disable inline diagnostics
-  signs = true,          -- Disable gutter signs
+  signs = false,          -- Disable gutter signs
   underline = true,      -- Optional: disable underline
   update_in_insert = true,
   severity_sort = true,
