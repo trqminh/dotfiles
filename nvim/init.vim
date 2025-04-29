@@ -70,7 +70,7 @@ set relativenumber
 set ls=0 " no last status line in nvim
 
 " MOUSE AND CURSOR
-set mouse=a
+set mouse=
 set guicursor=n-v-c-i:block
 
 
@@ -299,10 +299,10 @@ vim.api.nvim_create_autocmd("CursorHold", {
 })
 
 
-vim.fn.sign_define("DiagnosticSignError", {text = ">>", texthl = "DiagnosticSignError"})
-vim.fn.sign_define("DiagnosticSignWarn",  {text = ">>", texthl = "DiagnosticSignWarn"})
-vim.fn.sign_define("DiagnosticSignInfo",  {text = ">>", texthl = "DiagnosticSignInfo"})
-vim.fn.sign_define("DiagnosticSignHint",  {text = ">>", texthl = "DiagnosticSignHint"})
+-- vim.fn.sign_define("DiagnosticSignError", {text = ">>", texthl = "DiagnosticSignError"})
+-- vim.fn.sign_define("DiagnosticSignWarn",  {text = ">>", texthl = "DiagnosticSignWarn"})
+-- vim.fn.sign_define("DiagnosticSignInfo",  {text = ">>", texthl = "DiagnosticSignInfo"})
+-- vim.fn.sign_define("DiagnosticSignHint",  {text = ">>", texthl = "DiagnosticSignHint"})
 
 vim.o.updatetime = 500
 
@@ -310,5 +310,7 @@ EOF
 
 " INDENT BLANKLINE
 lua << EOF
-require("ibl").setup()
+require("ibl").setup {
+    scope = { enabled = false },
+}
 EOF
