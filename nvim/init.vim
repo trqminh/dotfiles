@@ -139,6 +139,21 @@ EOF
 " GITSIGNS
 lua << EOF
 require('gitsigns').setup({
+  -- 1. Turn the sign column off
+  signcolumn = false,      -- or 'no'
+
+  -- 2. Highlight the number column instead
+  numhl      = true,       -- enable GitSigns*Nr highlight groups
+  linehl     = false,      -- keep normal line background
+
+  -- 3.  Hide the actual sign text so nothing prints in the (now-hidden) column
+  signs = {
+    add          = { text = '' },
+    change       = { text = '' },
+    delete       = { text = '' },
+    topdelete    = { text = '' },
+    changedelete = { text = '' },
+  },
   on_attach = function(bufnr)
     local gitsigns = require('gitsigns')
 
@@ -285,18 +300,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 vim.diagnostic.config({
-  virtual_text = false,   -- Disable inline diagnostics
+  virtual_text = true,   -- Disable inline diagnostics
   signs = false,          -- Disable gutter signs
   underline = true,      -- Optional: disable underline
   update_in_insert = true,
   severity_sort = true,
 })
 
-vim.api.nvim_create_autocmd("CursorHold", {
-  callback = function()
-    vim.diagnostic.open_float(nil, { focus = false, scope = "line" })
-  end
-})
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--   callback = function()
+--     vim.diagnostic.open_float(nil, { focus = false, scope = "line" })
+--   end
+-- })
 
 
 -- vim.fn.sign_define("DiagnosticSignError", {text = ">>", texthl = "DiagnosticSignError"})
