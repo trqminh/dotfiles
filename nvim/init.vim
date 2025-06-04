@@ -307,6 +307,9 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
+vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
+vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
+
 -- vim.api.nvim_create_autocmd("CursorHold", {
 --   callback = function()
 --     vim.diagnostic.open_float(nil, { focus = false, scope = "line" })
