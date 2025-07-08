@@ -217,6 +217,15 @@ require('gitsigns').setup({
 
   end,
 })
+
+
+vim.cmd [[
+  highlight GitSignsAddNr guibg=NONE guifg=#48A860 ctermbg=NONE ctermfg=Green
+  highlight GitSignsChangeNr guibg=NONE guifg=#FADA5E ctermbg=NONE ctermfg=Yellow
+  highlight GitSignsDeleteNr guibg=NONE guifg=#ff0000 ctermbg=NONE ctermfg=Red
+  highlight GitSignsTopDeleteNr guibg=NONE guifg=#ff0000 ctermbg=NONE ctermfg=Red
+  highlight GitSignsChangedeleteNr guibg=NONE guifg=#ff0000 ctermbg=NONE ctermfg=Red
+]]
 EOF
 
 " ARIAL
