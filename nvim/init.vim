@@ -26,6 +26,7 @@ Plug 'saadparwaiz1/cmp_luasnip'              " cmp ↔ LuaSnip
 Plug 'craftzdog/solarized-osaka.nvim'
 Plug 'yobibyte/helix-nvim'
 Plug 'EdenEast/nightfox.nvim'
+Plug 'ishan9299/nvim-solarized-lua'
 
 " explorer
 Plug 'nvim-lua/plenary.nvim' "ntree prerequisite
@@ -66,7 +67,6 @@ set nofixendofline
 set lazyredraw
 set showtabline=2
 set cursorline
-set relativenumber
 set ls=0 " no last status line in nvim
 
 " MOUSE AND CURSOR
@@ -78,7 +78,7 @@ set guicursor=n-v-c-i:block
 highlight Comment ctermfg=green
 set termguicolors
 set background=dark
-colorscheme solarized-osaka
+colorscheme solarized-flat
 hi clear CursorLine
 
 " GENERAL KEY MAP
@@ -328,7 +328,16 @@ EOF
 
 " INDENT BLANKLINE
 lua << EOF
+local highlight = {
+  "CursorColumn",
+  "Whitespace",
+}
 require("ibl").setup {
-    scope = { enabled = false },
+  indent = { highlight = highlight, char = "" },
+  whitespace = {
+      highlight = highlight,
+      remove_blankline_trail = false,
+  },
+  scope = { enabled = false },
 }
 EOF
