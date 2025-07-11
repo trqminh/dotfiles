@@ -309,7 +309,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 vim.diagnostic.config({
-  virtual_text = true,   -- Disable inline diagnostics
+  virtual_text = false,   -- Disable inline diagnostics
   signs = false,          -- Disable gutter signs
   underline = true,      -- Optional: disable underline
   update_in_insert = true,
@@ -325,6 +325,19 @@ vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
 --   end
 -- })
 
+-- Add a toggle function for showing diagnostic, map it to <leader>te
+local diagnostic_open = false
+local float_win = nil
+
+vim.keymap.set("n", "<leader>te", function()
+  if diagnostic_open and float_win and vim.api.nvim_win_is_valid(float_win) then
+    vim.api.nvim_win_close(float_win, true)
+    diagnostic_open = false
+  else
+    float_win = vim.diagnostic.open_float(nil, { focus = false, scope = "line" })
+    diagnostic_open = true
+  end
+end, { desc = "Toggle diagnostic float" })
 
 -- vim.fn.sign_define("DiagnosticSignError", {text = ">>", texthl = "DiagnosticSignError"})
 -- vim.fn.sign_define("DiagnosticSignWarn",  {text = ">>", texthl = "DiagnosticSignWarn"})
