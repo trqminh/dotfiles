@@ -16,8 +16,9 @@ call plug#end()
 
 " OPTIONS
 syntax on
-set tabstop=4
-set shiftwidth=4
+autocmd FileType * setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+set autoindent
+set smarttab
 set expandtab
 set number
 set hlsearch

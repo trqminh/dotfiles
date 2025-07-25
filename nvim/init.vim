@@ -78,7 +78,7 @@ set guicursor=n-v-c-i:block
 highlight Comment ctermfg=green
 set termguicolors
 set background=dark
-colorscheme solarized-flat
+colorscheme solarized-osaka
 hi clear CursorLine
 
 " GENERAL KEY MAP
