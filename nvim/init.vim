@@ -136,23 +136,20 @@ vim.keymap.set("n", "<C-S-N>", function() harpoon:list():next() end)
 EOF
 
 
-" GITSIGNS
+" GITSIGNS WITH STATUSCOLUMN (Fixed)
 lua << EOF
 require('gitsigns').setup({
-  -- 1. Turn the sign column off
-  signcolumn = false,      -- or 'no'
-
-  -- 2. Highlight the number column instead
-  numhl      = true,       -- enable GitSigns*Nr highlight groups
-  linehl     = false,      -- keep normal line background
-
-  -- 3.  Hide the actual sign text so nothing prints in the (now-hidden) column
+  -- Enable signcolumn so gitsigns can place signs
+  signcolumn = true,
+  numhl = false,
+  linehl = false,
+  
   signs = {
-    add          = { text = '' },
-    change       = { text = '' },
-    delete       = { text = '' },
-    topdelete    = { text = '' },
-    changedelete = { text = '' },
+    add          = { text = '┃' },
+    change       = { text = '┃' },
+    delete       = { text = '▸' },
+    topdelete    = { text = '‾' },
+    changedelete = { text = '┃' },
   },
   on_attach = function(bufnr)
     local gitsigns = require('gitsigns')
@@ -218,13 +215,17 @@ require('gitsigns').setup({
   end,
 })
 
+-- Use statuscolumn to reorder: line numbers first, then signs
+-- %l = line numbers, %s = signs (including git signs)
+vim.opt.statuscolumn = "%l %s"
 
+-- Customize the highlight colors for git signs
 vim.cmd [[
-  highlight GitSignsAddNr guibg=NONE guifg=#48A860 ctermbg=NONE ctermfg=Green
-  highlight GitSignsChangeNr guibg=NONE guifg=#FADA5E ctermbg=NONE ctermfg=Yellow
-  highlight GitSignsDeleteNr guibg=NONE guifg=#ff0000 ctermbg=NONE ctermfg=Red
-  highlight GitSignsTopDeleteNr guibg=NONE guifg=#ff0000 ctermbg=NONE ctermfg=Red
-  highlight GitSignsChangedeleteNr guibg=NONE guifg=#ff0000 ctermbg=NONE ctermfg=Red
+  highlight GitSignsAdd guifg=#48A860 ctermfg=Green
+  highlight GitSignsChange guifg=#FADA5E ctermfg=Yellow  
+  highlight GitSignsDelete guifg=#ff0000 ctermfg=Red
+  highlight GitSignsTopDelete guifg=#ff0000 ctermfg=Red
+  highlight GitSignsChangeDelete guifg=#ff0000 ctermfg=Red
 ]]
 EOF
 
