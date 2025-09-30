@@ -98,8 +98,8 @@ nnoremap <Leader>g :Neotree float git_status<CR>
 
 " SEARCH 
 " nnoremap <C-p> :FZF<CR>
-nnoremap <C-p> <cmd>Telescope git_files<cr>
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>Telescope git_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
