@@ -41,7 +41,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 
 " indent
-Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'Yggdroot/indentLine'
 
 " outline view
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -349,9 +349,7 @@ vim.o.updatetime = 500
 
 EOF
 
-" INDENT BLANKLINE
-lua << EOF
-require("ibl").setup {
-  scope = { enabled = false },
-}
-EOF
+" INDENT
+let g:indentLine_char_list = ['┊']
+let g:indentLine_showFirstIndentLevel=1
+let g:indentLine_first_char='┊'
