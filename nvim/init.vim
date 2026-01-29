@@ -41,7 +41,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 
 " indent
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 
 " outline view
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -70,7 +70,7 @@ set cursorline
 set ls=0 " no last status line in nvim
 
 " MOUSE AND CURSOR
-set mouse=
+set mouse=a
 set guicursor=n-v-c-i:block
 
 
@@ -78,7 +78,7 @@ set guicursor=n-v-c-i:block
 highlight Comment ctermfg=green
 set termguicolors
 set background=dark
-colorscheme solarized-osaka
+colorscheme helix
 hi clear CursorLine
 
 " GENERAL KEY MAP
@@ -246,7 +246,7 @@ local ts = require'nvim-treesitter.configs'
 ts.setup {
   ensure_installed = {'cpp', 'python', 'bash'},
   highlight = {
-    enable = true, -- Enable Treesitter-based highlighting
+    enable = false, -- Enable Treesitter-based highlighting
   },
 }
 EOF
@@ -350,6 +350,6 @@ vim.o.updatetime = 500
 EOF
 
 " INDENT
-let g:indentLine_char_list = ['┊']
-let g:indentLine_showFirstIndentLevel=1
-let g:indentLine_first_char='┊'
+" let g:indentLine_char_list = ['┊']
+" let g:indentLine_showFirstIndentLevel=1
+" let g:indentLine_first_char='┊'
