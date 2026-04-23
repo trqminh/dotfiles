@@ -79,7 +79,7 @@ set guicursor=n-v-c-i:block
 highlight Comment ctermfg=green
 set termguicolors
 set background=dark
-colorscheme flexoki
+colorscheme solarized-osaka
 hi clear CursorLine
 
 " GENERAL KEY MAP
@@ -247,7 +247,7 @@ local ts = require'nvim-treesitter.configs'
 ts.setup {
   ensure_installed = {'cpp', 'python', 'bash'},
   highlight = {
-    enable = true, -- Enable Treesitter-based highlighting
+    enable = false, -- Enable Treesitter-based highlighting
   },
 }
 EOF
@@ -348,6 +348,18 @@ end, { desc = "Toggle diagnostic float" })
 
 vim.o.updatetime = 500
 
+EOF
+
+" telescope
+lua << EOF
+require('telescope').setup{
+  pickers = {
+    find_files = {
+      no_ignore = true,  -- Don't respect .gitignore
+      hidden = true       -- Show dotfiles (e.g., .env, .eslintrc)
+    }
+  }
+}
 EOF
 
 " INDENT
