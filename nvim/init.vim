@@ -42,7 +42,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 
 " indent
-" Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 
 " outline view
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -78,8 +78,8 @@ set guicursor=n-v-c-i:block
 " COLOR
 highlight Comment ctermfg=green
 set termguicolors
-set background=dark
-colorscheme solarized-osaka
+set background=light
+colorscheme flexoki
 hi clear CursorLine
 
 " GENERAL KEY MAP
@@ -247,7 +247,7 @@ local ts = require'nvim-treesitter.configs'
 ts.setup {
   ensure_installed = {'cpp', 'python', 'bash'},
   highlight = {
-    enable = false, -- Enable Treesitter-based highlighting
+    enable = true, -- Enable Treesitter-based highlighting
   },
 }
 EOF
@@ -363,6 +363,6 @@ require('telescope').setup{
 EOF
 
 " INDENT
-" let g:indentLine_char_list = ['┊']
-" let g:indentLine_showFirstIndentLevel=1
-" let g:indentLine_first_char='┊'
+let g:indentLine_char_list = ['┊']
+let g:indentLine_showFirstIndentLevel=1
+let g:indentLine_first_char='┊'
