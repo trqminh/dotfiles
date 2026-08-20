@@ -1,0 +1,12 @@
+{
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "/home/minht/.claude/statusline.sh",
+    "padding": 0
+  },
+  "effortLevel": "high",
+  "tui": "fullscreen",
+  "theme": "auto",
+  "skipAutoPermissionPrompt": true
+}

@@ -78,7 +78,7 @@ set guicursor=n-v-c-i:block
 " COLOR
 highlight Comment ctermfg=green
 set termguicolors
-set background=light
+set background=dark
 colorscheme flexoki
 hi clear CursorLine
 
