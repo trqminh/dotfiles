@@ -24,7 +24,8 @@ Plug 'saadparwaiz1/cmp_luasnip'              " cmp ↔ LuaSnip
 
 " theme
 Plug 'craftzdog/solarized-osaka.nvim'
-Plug 'yobibyte/helix-nvim'
+" Plug 'yobibyte/helix-nvim'  " upstream; now developed locally
+Plug '~/codes/dotfiles/nvim/helix-nvim'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'ishan9299/nvim-solarized-lua'
 Plug 'kepano/flexoki-neovim'
@@ -79,7 +80,7 @@ set guicursor=n-v-c-i:block
 highlight Comment ctermfg=green
 set termguicolors
 set background=dark
-colorscheme flexoki
+colorscheme helix
 hi clear CursorLine
 
 " GENERAL KEY MAP
@@ -247,7 +248,7 @@ local ts = require'nvim-treesitter.configs'
 ts.setup {
   ensure_installed = {'cpp', 'python', 'bash'},
   highlight = {
-    enable = true, -- Enable Treesitter-based highlighting
+    enable = false, -- Enable Treesitter-based highlighting
   },
 }
 EOF
